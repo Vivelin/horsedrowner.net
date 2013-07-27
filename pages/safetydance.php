@@ -1,0 +1,1 @@
+<?php safety_dance(); ?>

@@ -1,0 +1,41 @@
+html { 
+    font-size: 100%; 
+}
+
+body { 
+    background: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    font-family: "Segoe UI", "Segoe WP", "Helvetica Neue", Roboto, sans-serif; 
+    line-height: 1.4; 
+}
+
+h1 { 
+    font: 100 2.5em "Segoe UI Light", "Segoe UI", "Segoe WP", "Helvetica Neue", Roboto, sans-serif; 
+    margin: 0.5em 0 0.2em 0; 
+}
+
+p { 
+    margin: 1em 0; 
+}
+
+strong,
+.notice {
+    color: hsl(0, 100%, 50%);
+    font-weight: bold; 
+}
+
+img { 
+    border: none; 
+}
+
+a:link, 
+a:visited { 
+    color: hsl(0, 100%, 50%); 
+    text-decoration: none; 
+}
+
+a:hover, 
+a:active { 
+    color: hsl(0, 100%, 50%); 
+    text-decoration: underline; 
+}
