@@ -404,7 +404,7 @@ dd {
 }
 
 #avatar.offline {
-	border-color: <?=$SubtleColor?>;
+	border-color: #999999;
 }
 
 #title {
@@ -422,7 +422,7 @@ dd {
 }
 
 #title.offline {
-	color: <?=$SubtleColor?>;
+	color: #999999;
 }
 
 #login-id {
