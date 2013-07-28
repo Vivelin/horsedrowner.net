@@ -74,8 +74,9 @@
 </p>
 
 <div class="header">
-    <a href="/"><img id="avatar" class="avatar" src="avatars/<?=$avatar?>" alt="" title="<?=$avatar_title?>" class="<?php echo $stateClass;?>"></a>
-    <span id="title" class="title" class="<?php echo $stateClass;?>"><?php echo $stateMessage;?></span>
+    <a href="/"><img id="avatar" src="avatars/<?=$avatar?>" alt="" title="<?=$avatar_title?>" 
+        class="avatar <?php echo $stateClass;?>"></a>
+    <span id="title" class="title <?php echo $stateClass;?>"><?php echo $stateMessage;?></span>
     <ul class="nav">
 <?php         
 //Add all available pages to the nav bar thingy
