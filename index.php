@@ -24,7 +24,6 @@
     $page_modified = time();
     $page_modified = filemtime("pages/$PageID.php");
     $index_modified = filemtime(__FILE__);
-    $style_modified = filemtime("style.php");
     header("Last-Modified: ".gmdate("D, d M Y H:i:s", max($index_modified, $page_modified))." GMT");
     header("Content-type: text/html; charset=utf-8"); 
     header("Cache-Control: no-cache"); /* Can't cache with the status thing */
@@ -64,20 +63,20 @@
 <meta name="msapplication-TileImage" content="curly-144px.png">
 <meta name="msapplication-TileColor" content="#254A88">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.php">
+<link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <script src="includes/jquery-1.9.1.min.js"></script>
 <script src="includes/konami.js"></script>
 <title>horsedrowner.net</title>
 
-<p id="nowplaying" <?php if ($nowPlaying == null) echo "style=\"display: none;\""; ?>>
-    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"></a> <span><?php echo htmlspecialchars($nowPlaying); ?></span>
+<p id="nowplaying" class="alert" <?php if ($nowPlaying == null) echo "style=\"display: none;\""; ?>>
+    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"> <span><?php echo htmlspecialchars($nowPlaying); ?></span></a>
 </p>
 
-<div id="header">
-    <a href="/"><img id="avatar" src="avatars/<?=$avatar?>" alt="" title="<?=$avatar_title?>" class="<?php echo $stateClass;?>"></a>
-    <span id="title" class="<?php echo $stateClass;?>"><?php echo $stateMessage;?></span>
-    <ul id="nav">
+<div class="header">
+    <a href="/"><img id="avatar" class="avatar" src="avatars/<?=$avatar?>" alt="" title="<?=$avatar_title?>" class="<?php echo $stateClass;?>"></a>
+    <span id="title" class="title" class="<?php echo $stateClass;?>"><?php echo $stateMessage;?></span>
+    <ul class="nav">
 <?php         
 //Add all available pages to the nav bar thingy
 foreach ($Pages as $s) {
@@ -93,11 +92,11 @@ NIGGER;
     </ul>
 </div>
     
-<div id="main">
-    <div id="content">
+<div class="main">
+    <div class="content">
         <?php include "pages/$PageID.php";?>
     </div>
-    <div id="footer">
+    <div class="footer">
         <p><a href="preferences">Customize</a>
             &bull; <a href="//s.horsedrowner.net">Images</a>
             &bull; <a href="ip">IP</a>
@@ -111,6 +110,7 @@ function updateStatus() {
         {
             if (json.nowPlaying) {
                 $("#nowplaying span").html(json.nowPlaying);
+                $("#nowplaying a").attr("href", json.nowPlayingLink);
                 $("#nowplaying").show();
             } else {
                 $("#nowplaying").hide();
@@ -119,16 +119,16 @@ function updateStatus() {
             $("#title").html(json.stateMessage);
             switch (json.onlineState) {
                 case "online":
-                    $("#title").attr("class", "online");
-                    $("#avatar").attr("class", "online");
+                    $("#title").attr("class", "title online");
+                    $("#avatar").attr("class", "avatar online");
                     break;
                 case "in-game":
-                    $("#title").attr("class", "ingame");
-                    $("#avatar").attr("class", "ingame");
+                    $("#title").attr("class", "title ingame");
+                    $("#avatar").attr("class", "avatar ingame");
                     break;
                 default:
-                    $("#title").attr("class", "offline");
-                    $("#avatar").attr("class", "offline");
+                    $("#title").attr("class", "title offline");
+                    $("#avatar").attr("class", "avatar offline");
                     break;
             }
         }

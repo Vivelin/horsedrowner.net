@@ -1,92 +1,35 @@
-<?php 
-function getCookie($cookie) {
-    $value = false;
-    if (isset($_COOKIE[$cookie]))
-        $value = $_COOKIE[$cookie];
-    return ($value == "1");
-}
-
-/* Designed with simplicity in mind, rather than coverage. */
-function isMobile() {
-    $ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
-    return (strpos($ua, "mobile") !== FALSE || strpos($ua, "android") !== FALSE);
-}
-
-header('X-Powered-By: Go away.');
-header("Content-type: text/css"); 
-//header("Last-Modified: ".gmdate("D, d M Y H:i:s", filemtime(__FILE__))); //Caching the page means customization breaks until you Ctrl+F5
-require_once 'reset.css';
-
-$BackgroundColor = "rgb(100%, 100%, 100%)";
-$ForegroundColor = "rgb(0%, 0%, 0%)";
-$SubtleColor = "rgba(0%, 0%, 0%, 0.5)";
-$SubtlerColor = "rgba(0%, 0%, 0%, 0.05)";
-
-$hue = mt_rand(0, 359);
-try {
-	$ip = @explode('.', $_SERVER['REMOTE_ADDR']);
-	$hue = array_sum($ip) % 360;
-}
-catch (Exception $e) {
-	// We already have a fallback default
-}
-$AccentColor = "hsl(" . $hue . ", 60%, 50%)";
-
-
-$Capitalization = (getCookie("caps") ? "capitalize" : "lowercase");
-
-$TextFontFamily = "\"Segoe UI\", \"Segoe WP\", \"Open Sans\", sans-serif";
-$LightFontFamily = "\"Segoe UI Light\", \"Segoe UI\", \"Segoe WP\" ,\"Open Sans\", sans-serif";
-$BoldFontFamily = "\"Segoe WP Black\", \"Segoe WP\", \"Segoe UI\", \"Open Sans\", sans-serif";
-$CodeFontFamily = "Consolas, \"Ubuntu Mono\", monospace";
-
-if (getCookie("dark") xor isMobile()) {
-    $BackgroundColor = "rgba(0%, 0%, 0%, 1)";
-    $ForegroundColor = "rgba(100%, 100%, 100%, 1)"; 
-    $SubtleColor = "rgba(100%, 100%, 100%, 0.5)"; 
-    $SubtlerColor = "rgba(100%, 100%, 100%, 0.1)"; 
-}
-
-/* Funky mode */
-if ((mt_rand() / mt_getrandmax()) < 0.001) {
-	$OldAccentColor = $AccentColor;
-	$AccentColor = $BackgroundColor;
-	$BackgroundColor = $OldAccentColor;
-}
-?>
-
 @media (min-width: 960px) {
-    #main {
+    .main {
 	   max-width: 960px;
     }
 }
 
 @media (max-width: 480px) {
-    #header { 
+    .header { 
         height: auto !important;
     }
 
-    #content {
+    .content {
     	margin-top: 2em;
     }
 
-    #avatar { 
+    .avatar { 
         display: none; 
     }
 
-    #nav li { 
+    .nav li { 
         font-size: 1.5em !important; 
     }
 }
 
 ::selection {
 	background-color: #1e90ff;
-	color: <?=$BackgroundColor?>;
+	color: #ffffff;
 }
 
 ::-moz-selection {
 	background-color: #1e90ff;
-	color: <?=$BackgroundColor?>;
+	color: #ffffff;
 }
 
 /* 
@@ -97,33 +40,34 @@ html {
 }
 
 body {
-	background: <?=$BackgroundColor?>;
-	color: <?=$ForegroundColor?>;
-	font-family: <?=$TextFontFamily?>;
+	background: #ffffff;
+	color: #2d2d2d;
+	font-family: "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	line-height: 1.4;
+	margin: 0;
 }
 
 h1 {
 	color: #1e90ff;
-	font: 100 2.5em <?=$LightFontFamily?>;
+	font: 100 2.5em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 }
 
 h2 {
 	color: #1e90ff;
-	font: 100 1.8em <?=$LightFontFamily?>;
+	font: 100 1.8em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 }
 
 h3 {
 	color: #1e90ff;
-	font: 900 1.2em <?=$BoldFontFamily?>;
+	font: 900 1.2em "Segoe WP Black", "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 	text-transform: uppercase;
 }
 
 h4 {
-	font: 600 1em <?=$TextFontFamily?>;
+	font: 600 1em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 }
 
 p {
@@ -131,11 +75,11 @@ p {
 }
 
 pre, code, kbd {
-	font-family: <?=$CodeFontFamily?>;
+	font-family: Consolas, sans-serif;
 }
 
 pre {
-    background-color: <?=$SubtlerColor?>;
+    background-color: #eeeeee;
 	border-left: .5em solid #1e90ff;
 	padding: 0.5em 0.5em 0.5em 1.5em;
 	margin-bottom: 1em;
@@ -153,7 +97,7 @@ a:hover, a:active {
 }
 
 small {
-	color: <?=$SubtleColor?>;
+	color: #999999;
 	font-size: 0.6em;
 }
 
@@ -162,14 +106,15 @@ strong {
 }
 
 em {
-	color: <?=$SubtleColor?>;
+	color: #999999;
+	font-style: normal;
 }
 
 blockquote {
-    background-color: <?=$SubtlerColor?>;
+    background-color: #eeeeee;
 	border-left: .5em solid #1e90ff;
 	padding: 0.5em 0.5em 0.5em 1.5em;
-	margin-bottom: 1em;
+	margin: 0 0 1em 0;
 }
 
 blockquote p {
@@ -187,7 +132,7 @@ blockquote p:after {
 
 blockquote em,
 blockquote i {
-	color: <?=$ForegroundColor?>;
+	color: #2d2d2d;
 	font-style: italic;
 }
 
@@ -227,12 +172,12 @@ q q:after {
  * Custom elements
  */
 .nickname {
-	color: <?=$SubtleColor?>;
+	color: #999999;
 }
 
 a.button, a.button:visited {
-	border: 2px solid <?=$ForegroundColor?>;
-	color: <?=$ForegroundColor?>;
+	border: 2px solid #2d2d2d;
+	color: #2d2d2d;
 	display: inline-block;
 	margin-bottom: 0.3em;
 	margin-right: .3em;
@@ -242,18 +187,18 @@ a.button, a.button:visited {
 }
 
 a.button:hover {
-	background-color: <?=$SubtlerColor?>;
+	background-color: #eeeeee;
 }
 
 a.button:active {
-	background-color: <?=$ForegroundColor?>;
-	color: <?=$BackgroundColor?>;
+	background-color: #2d2d2d;
+	color: #ffffff;
 }
 
 a.button:not([href]) {
 	background: none;
-	border: 2px solid <?=$SubtleColor?>;
-	color: <?=$SubtleColor?>;
+	border: 2px solid #999999;
+	color: #999999;
 	cursor: default;
 }
 
@@ -261,24 +206,20 @@ a.button:not([href]) {
 	font-size: .8em;
 }
 
-/*.nowplaying {
-	padding-left: 30px;
-	background-image: url('lastfm.png');
-	background-position: center left;
-	background-size: 28px 16px;
-	background-repeat: no-repeat;
-}*/
-
-.alert,
-#nowplaying {
+.alert {
 	background-color: #d81102;
-	color: <?=$BackgroundColor?>;
+	color: #ffffff;
 	font-weight: 700;
 	margin: 0;
 	padding: .2em .5em;
 }
 
-#nowplaying img {
+.alert a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.alert img {
 	height: 1.5ex;
 }
 
@@ -318,13 +259,13 @@ img.pixelart {
  */
 ul {
 	padding-left: 2em;
-	margin-bottom: 1em;
+	margin: 0 0 1em 0;
 	list-style: square;
 }
 
 ol {
 	padding-left: 2em;
-	margin-bottom: 1em;
+	margin: 0 0 1em 0;
 	list-style: decimal;
 }
 
@@ -350,25 +291,24 @@ dd {
 	line-height: 1.5;
 }
 
-#nav {
+.nav {
 	list-style: none !important;
 	padding-left: 0 !important;
 }
 
-#nav li {
+.nav li {
 	float: left;
-	font: lighter 1.9em <?=$LightFontFamily?>;
+	font: lighter 1.9em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	margin-right: 0.5em;
-	text-transform: <?=$Capitalization?>;
 }
 
-#nav li a {
+.nav li a {
 	color: #999999 !important;
 	text-decoration: none !important;
 	text-shadow: none !important;
 }
 
-#nav li.current a {
+.nav li.current a {
 	color: #eeeeee !important;
 	text-decoration: none !important;
 	text-shadow: none !important;
@@ -377,17 +317,17 @@ dd {
 /*
  * Header
  */
-#main {
+.main {
 	margin: 1em;
 }
 
-#header {
+.header {
 	height: 100px;
 	padding: 1em;
 	background-color: #2d2d2d;
 }
  
-#avatar {
+.avatar {
 	border: 3px solid #86b5d9;
 	float: left;
 	margin-right: 1em;
@@ -395,49 +335,49 @@ dd {
 	height: 96px;
 }
 
-#avatar.online {
+.avatar.online {
 	border-color: #86b5d9;
 }
 
-#avatar.ingame {
+.avatar.ingame {
 	border-color: #8bc53f;
 }
 
-#avatar.offline {
+.avatar.offline {
 	border-color: #999999;
 }
 
-#title {
+.title {
 	font-weight: bold;
 	text-transform: uppercase;
-	color: <?=$ForegroundColor?>;
-}
-
-#title.online {
-	color: #86b5d9;
-}
-
-#title.ingame {
-	color: #8bc53f;
-}
-
-#title.offline {
 	color: #999999;
 }
 
-#login-id {
+.title.online {
+	color: #86b5d9;
+}
+
+.title.ingame {
+	color: #8bc53f;
+}
+
+.title.offline {
+	color: #999999;
+}
+
+.login-id {
 	float: right;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: <?=$ForegroundColor?>;
+	color: #2d2d2d;
 }
 
 /*
  * Footer
  */
-#footer {
-	border-top: 1px solid <?=$SubtleColor?>;
-	color: <?=$SubtleColor?>;
+.footer {
+	border-top: 1px solid #999999;
+	color: #999999;
 	font-size: 0.8em;
 	margin: 3em 0;
 }
@@ -445,7 +385,7 @@ dd {
 /*
  * Layout
  */
-#content {
+.content {
 	clear: both;
 }
 
