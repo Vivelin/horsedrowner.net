@@ -62,8 +62,9 @@
 <meta name="msapplication-navbutton-color" content="#254A88">
 <meta name="msapplication-TileImage" content="curly-144px.png">
 <meta name="msapplication-TileColor" content="#254A88">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800">
+<link rel="stylesheet" type="text/css" href="webkitsucks.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <script src="includes/jquery-1.9.1.min.js"></script>
 <script src="includes/konami.js"></script>
@@ -98,10 +99,9 @@ NIGGER;
         <?php include "pages/$PageID.php";?>
     </div>
     <div class="footer">
-        <p><a href="preferences">Customize</a>
-            &bull; <a href="//s.horsedrowner.net">Images</a>
-            &bull; <a href="ip">IP</a>
-            &bull; This page was last changed about <?php echo time_elapsed_string($page_modified);?>
+        <p><a href="//s.horsedrowner.net">Images</a>
+           &bull; <a href="ip">IP</a>
+           &bull; This page was last changed about <?php echo time_elapsed_string($page_modified);?>
     </div>
 </div>
 <script>
