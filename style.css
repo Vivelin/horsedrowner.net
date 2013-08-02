@@ -96,6 +96,10 @@ a:hover, a:active {
 	text-decoration: underline;
 }
 
+a img {
+	border: none;
+}
+
 small {
 	color: #999999;
 	font-size: 0.6em;
