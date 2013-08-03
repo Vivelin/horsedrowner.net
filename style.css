@@ -40,7 +40,7 @@ html {
 }
 
 body {
-	background: #ffffff;
+	background: #fff;
 	color: #2d2d2d;
 	font-family: "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	line-height: 1.4;
@@ -326,9 +326,10 @@ dd {
 }
 
 .header {
-	height: 100px;
 	padding: 1em;
 	background-color: #2d2d2d;
+	overflow: hidden;
+	border-bottom: 1px solid #aaaaaa
 }
  
 .avatar {
