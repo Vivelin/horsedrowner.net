@@ -134,7 +134,7 @@ function updateStatus() {
             }
         }
     });
-    setTimeout(updateStatus, 30000); //Update again in 30 seconds
+    setTimeout(updateStatus, 15000); //Update again in 15 seconds
 }
 
 updateStatus();

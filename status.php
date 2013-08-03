@@ -163,12 +163,12 @@ try {
 
     if (file_exists("status.txt")) {
         $diff = time() - filemtime("status.txt");
-        if ($diff < 30) {
+        if ($diff < 15) {
             $json = Status::getCached();
         }
     }
 
-    if (!isset($diff) || $diff >= 30 || $json === false) {
+    if (!isset($diff) || $diff >= 15 || $json === false) {
         $status = new Status($id);
         $status->load();
         $json = $status->getStatusJson();
