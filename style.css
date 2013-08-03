@@ -221,6 +221,7 @@ a.button:not([href]) {
 .alert a {
 	color: #ffffff;
 	text-decoration: none;
+	display: block; /* Allow clicking on the entire bar */
 }
 
 .alert img {
