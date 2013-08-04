@@ -21,12 +21,11 @@
     <dd>Passive development
     
     <dt>Current version:
-    <dd><a href="https://github.com/horsedrowner/Superscrot/wiki/Version-History" target="_blank">1.6.1</a>
+    <dd><a href="https://github.com/horsedrowner/Superscrot/wiki/Version-History" target="_blank">1.6.3</a>
 </dl>
 <p>
-    <a class="button" href="http://horsedrowner.net/app/Superscrot.application">Download</a>
-    <!-- <a class="button" href="http://d.horsedrowner.net/superscrot-1.6.1.zip">Download (64-bit)</a>
-    <a class="button" href="http://d.horsedrowner.net/superscrot-1.6.1-x86.zip">Download (32-bit)</a> -->
+    <a class="button" href="http://d.horsedrowner.net/Superscrot-1.6.3.zip">Download (64-bit)</a>
+    <a class="button" href="http://d.horsedrowner.net/Superscrot-1.6.3-x86.zip">Download (32-bit)</a>
     <a href="https://github.com/horsedrowner/Superscrot" target="_blank">Follow on GitHub</a>
 </p>
 
