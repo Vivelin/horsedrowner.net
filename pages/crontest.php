@@ -1,1 +1,0 @@
-There is probably a better way to do this.
