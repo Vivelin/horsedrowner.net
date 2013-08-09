@@ -18,7 +18,7 @@
     }
 
     .nav li { 
-        font-size: 1.5em !important; 
+        font-size: 1.9em !important; 
     }
 }
 
@@ -49,13 +49,13 @@ body {
 
 h1 {
 	color: #1e90ff;
-	font: 100 2.5em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 300 2.5em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 }
 
 h2 {
 	color: #1e90ff;
-	font: 100 1.8em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 300 1.8em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 }
 
@@ -67,7 +67,7 @@ h3 {
 }
 
 h4 {
-	font: 600 1em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 100 1em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 }
 
 p {
@@ -303,7 +303,8 @@ dd {
 
 .nav li {
 	float: left;
-	font: lighter 1.9em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 300 2.1em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	line-height: 1.2;
 	margin-right: 0.5em;
 }
 
