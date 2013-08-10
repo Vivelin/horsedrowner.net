@@ -38,6 +38,8 @@
 </blockquote>
 
 <h2>Borderlands 2</h2>
+<p>Everything MISTER TORGUE says.</p>
+
 <blockquote>
     <p>What?! I said <q>AAAAND open</q>, not <q>AAAAAND close a secondary set of doors</q>!</p>
     <small>Claptrap in <cite>Borderlands 2</cite></small>
