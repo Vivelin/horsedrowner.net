@@ -4,7 +4,7 @@
 <p>A music player that something something.</p>
 <dl>
     <dt>Status:
-    <dd>Active development (with <a href="https://github.com/PhilipeLouchtch">Philipe Louchtch</a>)
+    <dd>"Active" development (with <a href="https://github.com/PhilipeLouchtch">Philipe Louchtch</a>)
 
     <dt>Current version:
     <dd>None (<a href="tits">View planned features</a>)
