@@ -44,7 +44,7 @@ function get_age() {
 <h1 id="tv">TV series</h1>
 <h2>Watching</h2>
 <ul>
-    <li>Game of Thrones <em>S02E03 &bull; <?php echo datetime('13-7-2013 22:00'); ?></em>
+    <li>Game of Thrones <em>S02E04 &bull; <?php echo datetime('12-8-2013 22:51:52'); ?></em>
     <li>Firefly <em>S01E01 <q>Serenity</q> &bull; <?php echo datetime('1-7-2013 19:22:28'); ?></em>
     <li>Adventure Time <em>S01E20 <q>Freak City</q> &bull; <?php echo datetime('11-6-2013 17:42:49'); ?></em>
     <li>Elementary <em>S01E12 &bull; <?php echo datetime('1-6-2013 23:00'); ?></em>
