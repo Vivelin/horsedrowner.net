@@ -1,5 +1,20 @@
 <p>For a full list of projects, <a href="https://github.com/horsedrowner/">find me on GitHub</a>.</p>
 
+<h1 id="superscrot">Superscrot</h1>
+<p>A better screenshot uploader.
+<dl>
+    <dt>Status:
+    <dd>Passive development
+    
+    <dt>Current version:
+    <dd><a href="https://github.com/horsedrowner/Superscrot/wiki/Version-History" target="_blank">1.6.4</a>
+</dl>
+<p>
+    <a class="button" href="http://d.horsedrowner.net/Superscrot-1.6.4.zip">Download (64-bit)</a>
+    <a class="button" href="http://d.horsedrowner.net/Superscrot-1.6.4-x86.zip">Download (32-bit)</a>
+    <a href="https://github.com/horsedrowner/Superscrot" target="_blank">Follow on GitHub</a>
+</p>
+
 <h1 id="tits">TITS</h1>
 <p>A music player that something something.</p>
 <dl>
@@ -11,22 +26,6 @@
 </dl>
 <p>
     <a href="https://github.com/horsedrowner/TITS" target="_blank">Follow on GitHub</a>
-</p>
-
-
-<h1 id="superscrot">Superscrot</h1>
-<p>A better screenshot uploader.
-<dl>
-    <dt>Status:
-    <dd>Passive development
-    
-    <dt>Current version:
-    <dd><a href="https://github.com/horsedrowner/Superscrot/wiki/Version-History" target="_blank">1.6.3</a>
-</dl>
-<p>
-    <a class="button" href="http://d.horsedrowner.net/Superscrot-1.6.3.zip">Download (64-bit)</a>
-    <a class="button" href="http://d.horsedrowner.net/Superscrot-1.6.3-x86.zip">Download (32-bit)</a>
-    <a href="https://github.com/horsedrowner/Superscrot" target="_blank">Follow on GitHub</a>
 </p>
 
 <h1 id="mediakeysimulator">Media Key Simulator</h1>
