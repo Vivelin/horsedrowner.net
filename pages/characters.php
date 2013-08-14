@@ -11,5 +11,9 @@
 	<img src="/images/characters/starbound/human.png" alt="Human" class="pixelart">
 	<p>Human</p>
 </div>
+<div class="tile">
+	<img src="/images/characters/starbound/human2.png" alt="Human (2)" class="pixelart">
+	<p>Human (2)</p>
+</div>
 
 <div style="clear: both;"></div><!-- Fuck this. -->
