@@ -2,6 +2,37 @@
 function get_age() {
     return DateTime::createFromFormat('d/m/Y', '10/12/1991')->diff(new DateTime('now'))->y;
 }
+
+function print_show($show) {
+    $html = "<li>" . htmlspecialchars($show["name"]);
+
+    if (isset($show["season"])) {
+        $html .= " <em>";
+
+        if (isset($show["episode"])) {
+            $html .= sprintf("S%02dE%02d", intval($show["season"]), intval($show["episode"]));
+        } else {
+            $html .= "Season " . intval($show["season"]);
+        }
+
+        if (isset($show["episodename"])) {
+            $html .= " <q>" . htmlspecialchars($show["episodename"]) . "</q>";
+        }
+
+        if (isset($show["time"])) {
+            $html .= " &bull; " . datetime($show["time"]);
+        }
+
+        $html .= "</em>";
+    }
+
+    $html .= "\n";
+
+    echo $html;
+}
+
+include "data/series.php";
+
 ?>
 
 <dl>
@@ -44,12 +75,11 @@ function get_age() {
 <h1 id="tv">TV series</h1>
 <h2>Watching</h2>
 <ul>
-    <li>Game of Thrones <em>S02E07 &bull; <?php echo datetime('15-8-2013 22:58:44'); ?></em>
-    <li>Firefly <em>S01E01 <q>Serenity</q> &bull; <?php echo datetime('1-7-2013 19:22:28'); ?></em>
-    <li>Adventure Time <em>S01E20 <q>Freak City</q> &bull; <?php echo datetime('11-6-2013 17:42:49'); ?></em>
-    <li>Elementary <em>S01E12 &bull; <?php echo datetime('1-6-2013 23:00'); ?></em>
-    <li>Stargate Universe <em>Season 1 &bull; <?php echo datetime('5-4-2013 22:26 '); ?></em>
-    <li>Lost Girl <em>S01E05 &bull; <?php echo datetime('5-3-2013 21:34'); ?></em>
+<?php
+    foreach ($series as $show) {
+        print_show($show);
+    }
+?>
 </ul>
 
 <h2>Planning to watch</h2>

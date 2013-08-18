@@ -101,8 +101,7 @@
     function datetime($str) {
         $reltime = reltime($str);
         $html = <<<HTML
-<span class="datetime" title="$str">$reltime</span>      
-  
+<span class="datetime" title="$str">$reltime</span>
 HTML;
         return $html;
     }
