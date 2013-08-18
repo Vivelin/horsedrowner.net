@@ -33,6 +33,16 @@ function print_show($show) {
 
 include "data/series.php";
 
+usort($series, function($x, $y) {
+    $xd = new DateTime($x["time"]);
+    $yd = new DateTime($y["time"]);
+
+    if ($xd == $yd) {
+        return 0;
+    }
+    return $xd > $yd ? -1 : 1;
+});
+
 ?>
 
 <dl>
