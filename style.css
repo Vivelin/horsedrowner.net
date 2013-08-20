@@ -20,6 +20,15 @@
     .nav li { 
         font-size: 1.5em !important; 
     }
+
+    dt {
+		float: none !important;
+	}
+
+	dd {
+		padding: 0 !important;
+		margin: 0 0 .5em 0 !important;
+	}
 }
 
 ::selection {
@@ -222,6 +231,9 @@ a.button:not([href]) {
 	color: #ffffff;
 	text-decoration: none;
 	display: block; /* Allow clicking on the entire bar */
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .alert img {
@@ -394,16 +406,4 @@ dd {
  */
 .content {
 	clear: both;
-}
-
-/*
- * What the fuck, Chrome? http://bit.ly/OXGzDy
- */
-dialog {
-	background-color: inherit;
-	border: none;
-	color: inherit;
-	display: block;
-	padding: 0;
-	position: static;
 }
