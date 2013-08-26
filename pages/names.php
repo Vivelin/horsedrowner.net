@@ -14,7 +14,7 @@
 	);
 	sort($names);
 
-	$randomName = array_rand($names);
+	$randomName = $names[array_rand($names)];
 ?>
 
 <p>Random name: <strong><?=htmlspecialchars($randomName)?></strong></p>
