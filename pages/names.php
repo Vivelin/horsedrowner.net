@@ -23,4 +23,5 @@
 ?>
 </ul>
 
-<a href="<?=$namesUrl?>" target="_blank">Direct link</a>
+<a href="<?=$horse?>" target="_blank">Direct link (horsedrowner)</a>
+<a href="<?=$fear?>" target="_blank">Direct link (Lord Fear)</a>
