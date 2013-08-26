@@ -14,10 +14,10 @@
 		read_lines($fear)
 	);
 	sort($names);
-	
+
     foreach ($names as $name) {
-        if (strlen($name) > 0) {
-            echo "  <li>".trim($name)."\n";
+        if (strlen(trim($name)) > 0) {
+            echo "  <li>".htmlspecialchars(trim($name))."\n";
         }
     }
 ?>
