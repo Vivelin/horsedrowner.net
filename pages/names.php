@@ -1,4 +1,3 @@
-<ul>
 <?php
 	function read_lines($url) 
 	{
@@ -15,6 +14,13 @@
 	);
 	sort($names);
 
+	$randomName = array_rand($names);
+?>
+
+<p>Random name: <strong><?=htmlspecialchars($randomName)?></strong></p>
+
+<ul>
+<?php
     foreach ($names as $name) {
         if (strlen(trim($name)) > 0) {
             echo "  <li>".htmlspecialchars(trim($name))."\n";
