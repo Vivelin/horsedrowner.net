@@ -1,8 +1,20 @@
 <ul>
 <?php
-	$namesUrl = "http://dl.dropbox.com/u/764206/names.txt";
-    $content = htmlspecialchars(file_get_contents($namesUrl));
-    $names = explode("\n", $content);
+	function read_lines($url) 
+	{
+		$content = file_get_contents($url);
+		return explode("\n", $content);
+	}
+
+	$horse = "https://dl.dropboxusercontent.com/u/764206/names.txt";
+	$fear = "https://dl.dropboxusercontent.com/u/5124198/names.txt";
+
+	$names = array_merge(
+		read_lines($horse),
+		read_lines($fear)
+	);
+	sort($names);
+	
     foreach ($names as $name) {
         if (strlen($name) > 0) {
             echo "  <li>".trim($name)."\n";
