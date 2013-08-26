@@ -1,6 +1,7 @@
 <ul>
 <?php
-    $content = htmlspecialchars(file_get_contents("http://dl.dropbox.com/u/764206/names.txt"));
+	$namesUrl = "http://dl.dropbox.com/u/764206/names.txt";
+    $content = htmlspecialchars(file_get_contents($namesUrl));
     $names = explode("\n", $content);
     foreach ($names as $name) {
         if (strlen($name) > 0) {
@@ -9,3 +10,5 @@
     }
 ?>
 </ul>
+
+<a href="<?=$namesUrl?>" target="_blank">Direct link</a>
