@@ -2,6 +2,11 @@
 	function read_lines($url) 
 	{
 		$content = file_get_contents($url);
+
+		// FUCK. ME.
+		$content = mb_convert_encoding($content, 'UTF-8', 
+			mb_detect_encoding($content, 'UTF-8, ISO-8859-1', true));
+
 		return explode("\n", $content);
 	}
 
@@ -12,6 +17,8 @@
 		read_lines($horse),
 		read_lines($fear)
 	);
+	$names = array_map("trim", $names);
+	$names = array_filter($names);
 	sort($names);
 
 	$randomName = $names[array_rand($names)];
@@ -22,12 +29,12 @@
 <ul>
 <?php
     foreach ($names as $name) {
-        if (strlen(trim($name)) > 0) {
-            echo "  <li>".htmlspecialchars(trim($name))."\n";
-        }
+        echo "\t<li>" . htmlspecialchars($name) . "\n";
     }
 ?>
 </ul>
 
-<a href="<?=$horse?>" target="_blank">Direct link (horsedrowner)</a>
-<a href="<?=$fear?>" target="_blank">Direct link (Lord Fear)</a>
+<p>
+	<a href="<?=$horse?>" target="_blank">Direct link (horsedrowner)</a><br>
+	<a href="<?=$fear?>" target="_blank">Direct link (Lord Fear)</a>
+</p>
