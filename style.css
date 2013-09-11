@@ -89,9 +89,11 @@ pre, code, kbd {
 
 pre {
     background-color: #eeeeee;
+    color: #2d2d2d;
 	border-left: .5em solid #1e90ff;
 	padding: 0.5em 0.5em 0.5em 1.5em;
 	margin-bottom: 1em;
+	overflow: hidden;
 }
 
 a, a:link, a:visited {
@@ -400,10 +402,19 @@ dd {
  * Footer
  */
 .footer {
-	border-top: 1px solid #999999;
+	border-top: 1px solid #aaaaaa;
+	background-color: #2d2d2d;
 	color: #999999;
+	overflow: hidden;
 	font-size: 0.8em;
-	margin: 3em 0;
+
+	padding: .25em 1em;
+	margin-top: 2em;
+}
+
+.footer pre {
+	background-color: #3d3d3d;
+	color: #999999;
 }
 
 /*

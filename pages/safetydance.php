@@ -1,1 +1,1 @@
-<?php safety_dance(); ?>
+<?php Pretty::SafetyDance(); ?>

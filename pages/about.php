@@ -20,7 +20,8 @@ function print_show($show) {
         }
 
         if (isset($show["time"])) {
-            $html .= " &bull; " . datetime($show["time"]);
+            $html .= " &bull; <span class=\"datetime\">" . Pretty::RelativeTime($show["time"]) 
+                   . "</span>";
         }
 
         $html .= "</em>";
@@ -53,7 +54,7 @@ usort($series, function($x, $y) {
     <dd><?php echo get_age();?> <em>(10 december 1991)</em>
         
     <dt>Occupation
-    <dd><a href="http://www.liacs.nl/">Computer Science student</a> <em>since 2010</em>                
+    <dd><a href="http://www.liacs.nl/">Computer Science student</a> <em>since 2010</em>
     <dd><a href="http://www.decos.com/">Software Engineer</a> <em>since 2007</em>
 
     <dt>Email
@@ -67,19 +68,20 @@ usort($series, function($x, $y) {
 </dl>
 
 <p>
-    The name <span class="nickname">&ldquo;horsedrowner&rdquo;</span> was the name I came up with when I
-    first registered an account online. That was in the game <em>Age&nbsp;of&nbsp;Mythology</em>. The name was
-    based on the Norse &ldquo;Hersir&rdquo; unit, which each has a unique, random name. Examples include
-    <em>Ormr Boardmonger</em>, <em>Vigfus Manysmasher</em>, <em>Herjolfr Mammothbreaker</em>, and the
-    first thing that came to my mind when registering an account to play multiplayer was <span
-    class="nickname">&ldquo;horsedrowner&rdquo;</span>. I have been using it ever since, so if you
-    see the name anywhere, you can be sure it's me.
+    The name <span class="nickname">&ldquo;horsedrowner&rdquo;</span> was the name I came up with 
+    when I first registered an account online. That was in the game <em>Age&nbsp;of&nbsp;Mythology
+    </em>. The name was based on the Norse &ldquo;Hersir&rdquo; unit, which each has a unique, 
+    random name. Examples include <em>Ormr Boardmonger</em>, <em>Vigfus Manysmasher</em>, 
+    <em>Herjolfr Mammothbreaker</em>, and the first thing that came to my mind when registering an 
+    account to play multiplayer was <span class="nickname">&ldquo;horsedrowner&rdquo;</span>. I have
+    been using it ever since, so if you see the name anywhere, you can be sure it's me.
 
 <h1>Friends</h1>
 <ul>
     <li><a href="http://www.fearswe.net/">Lord Fear</a>
     <li><a href="http://www.team-metro.net/">Wingar</a>
     <li><a href="http://fundamentalscarf.se/">FundamScarf</a>
+    <li><a href="http://jennifoxi.tumblr.com/">Jenni</a>
 </ul>
 
 <h1 id="tv">TV series</h1>
@@ -101,9 +103,9 @@ usort($series, function($x, $y) {
 <h1 id="movies">Movies</h1>
 <p>Obviously not a complete list.
 <ul>
-    <li>Austin Powers: International Man of Mystery <em><?php echo datetime('18-8-2012 22:48'); ?></em>
-    <li>WALL-E <em><?php echo datetime('18-6-2012 15:00'); ?></em>
-    <li>Super Troopers <em><?php echo datetime('5-5-2012'); ?></em>
+    <li>Austin Powers: International Man of Mystery <em><?php Pretty::WriteDateTime('18-8-2012 22:48'); ?></em>
+    <li>WALL-E <em><?php Pretty::WriteDateTime('18-6-2012 15:00'); ?></em>
+    <li>Super Troopers <em><?php Pretty::WriteDateTime('5-5-2012'); ?></em>
 </ul>
 
 <h1>Awesome people</h1>

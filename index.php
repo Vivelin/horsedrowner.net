@@ -1,8 +1,14 @@
 <?php
-    require_once "util.php";
+    spl_autoload_register(function ($class) {
+        include 'php/' . $class . '.class.php';
+    });
+
+    require_once "config.php";
     require_once "markdown.php";
-    
-    $ReqPageID = "about";
+
+    /* Configuration */
+    date_default_timezone_set('Europe/Amsterdam');
+    $ReqPageID = "about"; // Default page if nothing is requested
     $avatar = "curly/dai/100px.jpg";
     $avatar_title = "Curly Brace (Cave Story, drawn by daijitsu)";
 
@@ -71,13 +77,13 @@
 <title>horsedrowner.net</title>
 
 <p id="nowplaying" class="alert" <?php if ($nowPlaying == null) echo "style=\"display: none;\""; ?>>
-    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"> <span><?php echo htmlspecialchars($nowPlaying); ?></span></a>
+    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"> <span><?php Pretty::Write($nowPlaying); ?></span></a>
 </p>
 
 <div class="header">
-    <a href="/"><img id="avatar" src="avatars/<?=$avatar?>" alt="" title="<?=$avatar_title?>" 
-        class="avatar <?php echo $stateClass;?>"></a>
-    <span id="title" class="title <?php echo $stateClass;?>"><?php echo $stateMessage;?></span>
+    <a href="/"><img id="avatar" src="avatars/<?=$avatar?>" alt="" title="<?php Pretty::Write($avatar_title);?>" 
+        class="avatar <?php Pretty::Write($stateClass);?>"></a>
+    <span id="title" class="title <?php Pretty::Write($stateClass);?>"><?php Pretty::Write($stateMessage);?></span>
     <ul class="nav">
 <?php         
 //Add all available pages to the nav bar thingy
@@ -98,11 +104,17 @@ NIGGER;
     <div class="content">
         <?php include "pages/$PageID.php";?>
     </div>
-    <div class="footer">
-        <p><a href="//s.horsedrowner.net">Images</a>
-           &bull; <a href="ip">IP</a>
-           &bull; This page was last changed about <?php echo time_elapsed_string($page_modified);?>
-    </div>
+</div>
+
+<div class="footer">
+    <p><a href="//s.horsedrowner.net">Images</a>
+       &bull; <a href="ip">IP</a>
+       &bull; This page was last changed <?php Pretty::WriteDateTime($page_modified);?>
+<?php if (DEBUG) { ?> 
+    <pre>
+<?php print_r($_SERVER); ?> 
+    </pre>
+<?php } ?> 
 </div>
 <script>
 function updateStatus() {
