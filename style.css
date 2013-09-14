@@ -1,5 +1,5 @@
 @media (min-width: 960px) {
-    .main {
+    .content {
 	   max-width: 960px;
     }
 }
@@ -343,17 +343,13 @@ dd {
 /*
  * Header
  */
-.main {
-	margin: 1em;
-}
-
 .header {
 	padding: 1em;
 	background-color: #2d2d2d;
 	overflow: hidden;
 	border-bottom: 1px solid #aaaaaa
 }
- 
+
 .avatar {
 	border: 3px solid #86b5d9;
 	float: left;
@@ -410,7 +406,7 @@ dd {
 	font-size: 0.8em;
 
 	padding: .25em 1em;
-	margin-top: 2em;
+	margin-top: 5em;
 }
 
 .footer pre {
@@ -422,5 +418,6 @@ dd {
  * Layout
  */
 .content {
+	margin: 1em;
 	clear: both;
 }

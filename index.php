@@ -100,10 +100,8 @@ NIGGER;
     </ul>
 </div>
     
-<div class="main">
-    <div class="content">
-        <?php include "pages/$PageID.php";?>
-    </div>
+<div class="content">
+    <?php include "pages/$PageID.php";?>
 </div>
 
 <div class="footer">
