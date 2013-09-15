@@ -24,8 +24,8 @@ $series = array(
     array(
         "name" => "Elementary",
         "season" => 1,
-        "episode" => 13,
-        "time" => "12-9-2013 22:27:21",
+        "episode" => 15,
+        "time" => "15-9-2013 21:07:41",
     ),
     array(
         "name" => "Stargate Universe",
