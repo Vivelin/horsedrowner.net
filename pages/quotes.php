@@ -19,6 +19,12 @@
         Elevator Philosophy</a></cite> by <a href="http://www.youtube.com/user/wowcrendor">Wowcrendor</a></small>
 </blockquote>
 
+<h2>Day[9]</h2>
+<blockquote>
+    <p>I channeled the power of the duck. I became the duck. So in my code, things started to make no fucking sense at all.</p>
+    <small>Day[9] in <cite><a href="http://www.youtube.com/watch?v=RaQdd8bUaXk#t=692">Day[9] Story Time - How I Almost Died</a></cite></small>
+</blockquote>
+
 <h2>TableTop</h2>
 <blockquote>
     <p>And the dragon goes <q>MUUURRRRDDDEEERRR!</q></p>
