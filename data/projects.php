@@ -5,9 +5,9 @@ $projects = [
 		"name" => "Superscrot",
 		"description" => "A better screenshot uploader.",
 		"status" => "Passive development",
-		"version" => "1.6.4",
-		"download64" => "http://d.horsedrowner.net/Superscrot-1.6.4.zip",
-		"download32" => "http://d.horsedrowner.net/Superscrot-1.6.4-x86.zip",
+		"version" => "1.6.5",
+		"download64" => "https://github.com/horsedrowner/Superscrot/releases/download/v1.6.5/Superscrot-1.6.5.zip",
+		"download32" => "https://github.com/horsedrowner/Superscrot/releases/download/v1.6.5/Superscrot-1.6.5-x86.zip",
 		"source" => "https://github.com/horsedrowner/Superscrot",
 	],
 	[

@@ -1,10 +1,14 @@
 <?php
 function print_project($project) 
 {
-    $html = "<h1>" . htmlspecialchars($project["name"]) . "</h1>\n"
-          . "<p>" . $project["description"] . "</p>\n"
+    $name = htmlspecialchars($project["name"]);
+    $desc = $project["description"];
+    $status = htmlspecialchars($project["status"]);
+
+    $html = "<h1>$name</h1>\n"
+          . "<p>$desc</p>\n"
           . "<dl>\n"
-          . "\t<dt>Status:\n\t<dd>" . htmlspecialchars($project["status"]) . "\n";
+          . "\t<dt>Status:\n\t<dd>$status\n";
 
     if (isset($project["version"])) {
         $html .= "\t<dt>Version:\n"
@@ -18,30 +22,31 @@ function print_project($project)
         }
     }
 
-    /* URL-encoding and array checking... woo. */
-    $dl64 = "";
-    if (isset($project["download64"]))
-        $dl64 = " href=\"" . htmlspecialchars($project["download64"]) . "\"";
+    $html .= "</dl>\n"
+           . "<p>\n";
 
-    $dl32 = "";
-    if (isset($project["download32"]))
-        $dl32 = " href=\"" . htmlspecialchars($project["download32"]) . "\"";
-
-    $source = htmlspecialchars($project["source"]);
-    if (strpos($source, "github.com") !== FALSE) {
-        $sourceText = "Follow on Github";
-    } else {
-        $sourceText = "Source";
+    if (isset($project["download64"])) {
+        $dl64 = htmlspecialchars($project["download64"]);
+        $html .= "\t<a class=\"button\" href=\"$dl64\">Download (64-bit)</a>\n";
     }
 
-    $html .= "</dl>\n"
-           . "<p>\n"
-           . "\t<a class=\"button\"" . $dl64 . ">Download (64-bit)</a>\n"
-           . "\t<a class=\"button\"" . $dl32 . ">Download (32-bit)</a>\n"
-           . "\t<a target=\"_blank\" href=\"" . $source . "\">" . $sourceText . "</a>\n"
-           . "</p>";
+    if (isset($project["download32"])) {
+        $dl32 = htmlspecialchars($project["download32"]);
+        $html .= "\t<a class=\"button\" href=\"$dl32\">Download (32-bit)</a>\n";
+    }
 
-    $html .= "\n";
+    if (isset($project["download"])) {
+        $dl = htmlspecialchars($project["download"]);
+        $html .= "\t<a class=\"button\" href=\"$dl\">Download</a>\n";
+    }
+
+    if (isset($project["source"])) {
+      $source = htmlspecialchars($project["source"]);
+      $sourceText = (strpos($source, "github.com") !== FALSE) ? "Follow on Github" : "Source";
+      $html .= "\t<a target=\"_blank\" href=\"$source\">$sourceText</a>\n";
+    }
+
+    $html .= "</p>\n";
     echo $html;
 }
 
