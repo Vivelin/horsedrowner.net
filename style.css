@@ -126,6 +126,15 @@ em {
 	font-style: normal;
 }
 
+del {
+	text-decoration: line-through;
+}
+
+ins {
+	text-decoration: none;
+	font-weight: 600;
+}
+
 blockquote {
     background-color: #eeeeee;
 	border-left: .5em solid #1e90ff;

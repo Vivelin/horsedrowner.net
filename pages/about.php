@@ -130,7 +130,7 @@ usort($series, function($x, $y) {
             <a href="http://www.youtube.com/Lucahjin">Lucahjin</a>
         </strong>
         <p>
-            Also watch the <a href="http://www.youtube.com/TheGameStation">The Game Station podcast</a>.
+            Also watch the <del>The Game Station</del> <ins><a href="http://www.youtube.com/Polaris">The Co-optional podcast</a></ins>.
 </ul>
 
 <h1>PC Specs</h1>
@@ -148,7 +148,7 @@ usort($series, function($x, $y) {
     <dd>G.Skill 8 GB DDR3-1600
 
     <dt>Graphics
-    <dd>EVGA NVIDIA GeForce GTX 570
+    <dd>SAPPHIRE AMD Radeon R9 290
 
     <dt>SSD
     <dd>Crucial M4 128 GB
