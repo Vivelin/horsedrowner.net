@@ -20,7 +20,7 @@ function print_show($show) {
         }
 
         if (isset($show["time"])) {
-            $html .= " &bull;" . Pretty::DateTime($show["time"]);
+            $html .= " &bull; " . Pretty::DateTime($show["time"]);
         }
 
         $html .= "</em>";
