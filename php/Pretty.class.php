@@ -41,18 +41,29 @@ class Pretty
 	{
 		if (!ctype_digit($date))
 			$date = strtotime($date);
+		$date = getdate($date);
 
-		return date("l j F Y, G:i", $date);
+		$format = "j M Y";
+		if ($date["hours"] > 0 || $date["minutes"] > 0 || $date["seconds"] > 0) {
+			$format .= ", G:i";
+			if ($date["seconds"] > 0)
+				$format .= ":s";
+		}
+
+		return date($format, $date[0]);
 	}
 
 	/**
-	 * Prints the specified date or time.
+	 * Returns the specified date or time as HTML markup.
 	 *
-	 * @param mixed $date The date to print as string or as Unix timestamp.
+	 * @param mixed $date 	The date to print as string or as Unix timestamp.
+ 	 * @return string  		A string that represents the specified date as HTML.
 	 */
-	static function WriteDateTime($date)
+	static function DateTime($date)
 	{
-		print "<span class=\"datetime\">" . self::RelativeTime($date) . "</span>";
+		$html = "<span class=\"datetime\" title=\"" . self::FormatDate($date) . "\">" 
+		      . self::RelativeTime($date) . "</span>";
+		return $html;
 	}
 
 	/**
@@ -73,20 +84,24 @@ class Pretty
 		{
 			// Past
 			$day_diff = floor($diff / 86400);
+			$month_diff = floor($day_diff / 30);
 			if ($day_diff == 0)
 			{
 				if ($diff < 60) 	return 'just now';
-				if ($diff < 120) 	return '1 minute ago';
+				if ($diff < 120) 	return 'a minute ago';
 				if ($diff < 3600) 	return floor($diff / 60) . ' minutes ago';
-				if ($diff < 7200) 	return '1 hour ago';
+				if ($diff < 7200) 	return 'a hour ago';
 				if ($diff < 86400) 	return floor($diff / 3600) . ' hours ago';
 			}
 			if ($day_diff == 1) return 'yesterday';
 			if ($day_diff <  7) return $day_diff . ' days ago';
+			if ($day_diff < 14) return 'a week ago';
 			if ($day_diff < 31) return ceil($day_diff / 7) . ' weeks ago';
 			if ($day_diff < 60) return 'last month';
+			if ($month_diff < 12) return $month_diff . ' months ago';
+			if ($month_diff < 24) return 'a year ago';
 
-			return self::FormatDate($date);
+			return 'ages ago';
 		}
 		else
 		{

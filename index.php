@@ -107,7 +107,7 @@ NIGGER;
 <div class="footer">
     <p><a href="//s.horsedrowner.net">Images</a>
        &bull; <a href="ip">IP</a>
-       &bull; This page was last changed <?php Pretty::WriteDateTime($page_modified);?>
+       &bull; This page was last changed <?php print Pretty::DateTime($page_modified);?>
 <?php if (defined("DEBUG")) { ?> 
     <pre>
 <?php print_r($_SERVER); ?> 

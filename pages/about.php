@@ -20,8 +20,7 @@ function print_show($show) {
         }
 
         if (isset($show["time"])) {
-            $html .= " &bull; <span class=\"datetime\">" . Pretty::RelativeTime($show["time"]) 
-                   . "</span>";
+            $html .= " &bull;" . Pretty::DateTime($show["time"]);
         }
 
         $html .= "</em>";
@@ -103,9 +102,9 @@ usort($series, function($x, $y) {
 <h1 id="movies">Movies</h1>
 <p>Obviously not a complete list.
 <ul>
-    <li>Austin Powers: International Man of Mystery <em><?php Pretty::WriteDateTime('18-8-2012 22:48'); ?></em>
-    <li>WALL-E <em><?php Pretty::WriteDateTime('18-6-2012 15:00'); ?></em>
-    <li>Super Troopers <em><?php Pretty::WriteDateTime('5-5-2012'); ?></em>
+    <li>Austin Powers: International Man of Mystery <em><?php print Pretty::DateTime('18-8-2012 22:48'); ?></em>
+    <li>WALL-E <em><?php print Pretty::DateTime('18-6-2012 15:00'); ?></em>
+    <li>Super Troopers <em><?php print Pretty::DateTime('5-5-2012'); ?></em>
 </ul>
 
 <h1>Awesome people</h1>
