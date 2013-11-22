@@ -25,6 +25,16 @@
     <small>Day[9] in <cite><a href="http://www.youtube.com/watch?v=RaQdd8bUaXk#t=692">Day[9] Story Time - How I Almost Died</a></cite></small>
 </blockquote>
 
+<blockquote>
+    <p>
+        I knew as much about myself and what I wanted as I do about how to squeeze a fruit in a 
+        grocery store and know if it's gonna be good in a meal. I still don't know; I'd pick up a 
+        lemon and squeeze it and I'm like <q>Well, it's definitely a lemon... 'cause there's a label
+        here that says so... Guess we're gonna order out tonight.</q>
+    </p>
+    <small>Day[9] in <cite><a href="https://www.youtube.com/watch?v=CdLnuGAPNUg#t=198">Day[9] Story Time #5 - A High School Crush</a></cite></small>
+</blockquote>
+
 <h2>TableTop</h2>
 <blockquote>
     <p>And the dragon goes <q>MUUURRRRDDDEEERRR!</q></p>
