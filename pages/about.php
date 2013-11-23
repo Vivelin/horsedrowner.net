@@ -95,7 +95,6 @@ usort($series, function($x, $y) {
 
 <h2>Planning to watch</h2>
 <ul>
-    <li>Firefly
     <li>Dead Like Me
 </ul>
 
