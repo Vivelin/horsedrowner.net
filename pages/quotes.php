@@ -19,6 +19,14 @@
         Elevator Philosophy</a></cite> by <a href="http://www.youtube.com/user/wowcrendor">Wowcrendor</a></small>
 </blockquote>
 
+<h2>Dodger</h2>
+<blockquote>
+    <p>
+        Oh god. Oh. Oh my god! Oh my god! All the walls are babies! All the walls are babies! Oh my god!    ALL THE WALLS ARE BABIES! OH MY GOD THEY'RE BLEEDING! OH GOD! AAAAAAHHH! Oh my god. What's     happening? Oh my god!
+    </p>
+    <small>Dodger in <cite><a href="https://www.youtube.com/watch?v=bGjufkSfsVE#t=427">DEAD SPACE 3 [Dodger's View] w/ Jesse Part 18</a></cite></small>
+</blockquote>
+
 <h2>Day[9]</h2>
 <blockquote>
     <p>I channeled the power of the duck. I became the duck. So in my code, things started to make no fucking sense at all.</p>
