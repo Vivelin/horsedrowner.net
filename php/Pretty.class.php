@@ -101,7 +101,7 @@ class Pretty
 			if ($month_diff < 12) return $month_diff . ' months ago';
 			if ($month_diff < 24) return 'a year ago';
 
-			return 'ages ago';
+			return 'a long, long time ago';
 		}
 		else
 		{

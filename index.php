@@ -9,7 +9,7 @@
     /* Configuration */
     date_default_timezone_set('Europe/Amsterdam');
     $ReqPageID = "about"; // Default page if nothing is requested
-    $avatar = "curly/dai/100px.jpg";
+    $avatar = "curly/dai/512px.jpg";
     $avatar_title = "Curly Brace (Cave Story, drawn by daijitsu)";
 
     /* Load the page or 404 */
@@ -81,23 +81,29 @@
 </p>
 
 <div class="header">
-    <a href="/"><img id="avatar" src="avatars/<?=$avatar?>" alt="" title="<?php Pretty::Write($avatar_title);?>" 
-        class="avatar <?php Pretty::Write($stateClass);?>"></a>
-    <span id="title" class="title <?php Pretty::Write($stateClass);?>"><?php Pretty::Write($stateMessage);?></span>
-    <ul class="nav">
-<?php         
-//Add all available pages to the nav bar thingy
-foreach ($Pages as $s) {
-    if ($s === $ReqPageID) { $class = ' class="current"'; } else { $class = ''; }
-    $s = htmlentities($s);
-    $html = <<<NIGGER
-        <li$class><a href="$s">$s</a>
-    
-NIGGER;
-    print $html;
-}
-?>
-    </ul>
+    <div class="avatar">
+        <a href="/">
+            <img id="avatar" src="avatars/<?=$avatar?>" alt="" 
+                title="<?php Pretty::Write($avatar_title);?>" 
+                class="<?php Pretty::Write($stateClass);?>">
+        </a>
+    </div>
+    <div class="titlebar">
+        <span id="title" class="title <?php Pretty::Write($stateClass);?>">
+            <?php Pretty::Write($stateMessage);?>
+        </span>
+        <ul class="nav">
+    <?php         
+    //Add all available pages to the nav bar thingy
+    foreach ($Pages as $s) {
+        if ($s === $ReqPageID) { $class = ' class="current"'; } else { $class = ''; }
+        $s = htmlentities($s);
+        $html = "<li$class><a href=\"$s\">$s</a>\n";
+        print $html;
+    }
+    ?>
+        </ul>
+    </div>
 </div>
     
 <div class="content">
@@ -131,15 +137,15 @@ function updateStatus() {
             switch (json.onlineState) {
                 case "online":
                     $("#title").attr("class", "title online");
-                    $("#avatar").attr("class", "avatar online");
+                    $("#avatar").attr("class", "online");
                     break;
                 case "in-game":
                     $("#title").attr("class", "title ingame");
-                    $("#avatar").attr("class", "avatar ingame");
+                    $("#avatar").attr("class", "ingame");
                     break;
                 default:
                     $("#title").attr("class", "title offline");
-                    $("#avatar").attr("class", "avatar offline");
+                    $("#avatar").attr("class", "offline");
                     break;
             }
         }

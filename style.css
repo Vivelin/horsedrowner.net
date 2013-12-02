@@ -353,31 +353,28 @@ dd {
  * Header
  */
 .header {
-	padding: 1em;
 	background-color: #2d2d2d;
 	overflow: hidden;
-	border-bottom: 1px solid #aaaaaa
+	height: 120px;
 }
 
-.avatar {
-	border: 3px solid #86b5d9;
+.header .titlebar {
 	float: left;
-	margin-right: 1em;
-	width: 96px;
-	height: 96px;
+	padding: 1em;
 }
 
-.avatar.online {
-	border-color: #86b5d9;
+.header .avatar {
+	float: left;
 }
 
-.avatar.ingame {
-	border-color: #8bc53f;
+.header .avatar img {
+	height: 120px;
+	width: auto;
 }
 
-.avatar.offline {
-	border-color: #999999;
-}
+.avatar img.online  { border-left: 8px solid #86b5d9; }
+.avatar img.ingame  { border-left: 8px solid #8bc53f; }
+.avatar img.offline { border-left: none; }
 
 .title {
 	font-weight: bold;
@@ -385,15 +382,15 @@ dd {
 	color: #999999;
 }
 
-.title.online {
+.online {
 	color: #86b5d9;
 }
 
-.title.ingame {
+.ingame {
 	color: #8bc53f;
 }
 
-.title.offline {
+.offline {
 	color: #999999;
 }
 
@@ -408,7 +405,6 @@ dd {
  * Footer
  */
 .footer {
-	border-top: 1px solid #aaaaaa;
 	background-color: #2d2d2d;
 	color: #999999;
 	overflow: hidden;
