@@ -17,9 +17,9 @@ $series = array(
     array(
         "name" => "Adventure Time",
         "season" => 1,
-        "episode" => 24,
-        "episodename" => "What Have You Done?",
-        "time" => "4-12-2013 12:43",
+        "episode" => 26,
+        "episodename" => "The Gut Grinder",
+        "time" => "10-12-2013 10:43",
     ),
     array(
         "name" => "Elementary",
