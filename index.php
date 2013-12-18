@@ -141,7 +141,7 @@
     <p><a href="//s.horsedrowner.net">Images</a>
        &bull; <a href="ip">IP</a>
        &bull; This page was last changed <?php print Pretty::DateTime($page_modified);?>
-<?php if (defined("DEBUG")) { ?> 
+<?php if (Debug::IsEnabled()) { ?> 
     <pre>
 <?php print_r($_SERVER); ?> 
     </pre>

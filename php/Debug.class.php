@@ -1,10 +1,15 @@
 <?php
 class Debug
 {
+	public static function IsEnabled()
+	{
+		return (defined("DEBUG") && DEBUG);
+	}
+
 	public static function Write($message)
 	{
 		try {
-			if (defined("DEBUG")) {
+			if (self::IsEnabled()) {
 				$stderr = fopen("php://stderr", "w");
 				fprintf($stderr, $message);
 				fclose($stderr);
