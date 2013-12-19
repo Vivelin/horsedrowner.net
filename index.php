@@ -1,34 +1,5 @@
 <?php
-    function error_handler($errno, $errstr, $errfile, $errline ) 
-    {
-        switch ($errno) {
-            case E_NOTICE:
-            case E_USER_NOTICE:
-                Debug::WriteLine("E_NOTICE at " . $errfile . " line " . $errline . ": " . $errstr);
-                return true;
-        }
-
-        throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
-    }
-
-    function exception_handler($exception) {
-        Debug::WriteLine("Uncaught " . $exception);
-
-        // Screw the output
-        ob_end_clean(); 
-
-        // Show a 500 page instead
-        header("HTTP/1.1 500 Internal Server Error");
-        include "500.htm";
-        exit();
-    }
-
-    set_error_handler("error_handler");
-    set_exception_handler("exception_handler");
-    spl_autoload_register(function ($class) {
-        include "php/" . $class . ".class.php";
-    });
-
+    require_once "php/default.php";
     require_once "config.php";
     require_once "markdown.php";
 
@@ -149,7 +120,7 @@
 </div>
 <script>
 function updateStatus() {
-    $.getJSON("status.php?id=horsedrowner", function(json) {
+    $.getJSON("status.php", function(json) {
         if (typeof json.error == "undefined" && json.onlineState && json.stateMessage)
         {
             if (json.nowPlaying) {
@@ -166,7 +137,7 @@ function updateStatus() {
                     $("#title").attr("class", "title online");
                     $("#avatar").attr("class", "online");
                     break;
-                case "in-game":
+                case "ingame":
                     $("#title").attr("class", "title ingame");
                     $("#avatar").attr("class", "ingame");
                     break;
@@ -177,7 +148,7 @@ function updateStatus() {
             }
         }
     });
-    setTimeout(updateStatus, 15000); //Update again in 15 seconds
+    setTimeout(updateStatus, 10000);
 }
 
 updateStatus();
