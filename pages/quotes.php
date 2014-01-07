@@ -25,11 +25,32 @@
     <small>Nika Harper during Dodger's <cite>Treat Peoples Like Peoples</cite> charity live stream</cite></small>
 </blockquote>
 
-<h2>TotalBiscuit</h2>
+<h2 id="totalbiscuit">TotalBiscuit</h2>
 <blockquote>
     <p>Look at my wood. Stare at it!</p>
     <p>It's not as big as I thought it would be...</p>
     <small>TotalBiscuit and Jesse Cox in <cite><a href="http://www.youtube.com/watch?v=H5b2ybvOPHE#t=645">Starbound Beta - Episode 1 - Jesse is bad at interstellar travel</a></cite></small>
+</blockquote>
+
+<blockquote>
+    <p><q>What's all that noise outside? Who's here?</q> It's me, the big giant horse schlong.</p>
+    <p>Oh, my cousins, aunt and uncle horseschlong senpai are here &ndash; Ow, stop hitting me!</p>
+    <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=KeSm9qPBSJM#t=902">TotalBiscuit is the Prettiest Prettiest Princess - Part 1</a></cite></small>
+</blockquote>
+
+<blockquote>
+    <p>Oh torture, how passé.</p>
+    <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=KeSm9qPBSJM#t=1028">TotalBiscuit is the Prettiest Prettiest Princess - Part 1</a></cite></small>
+</blockquote>
+
+<blockquote>
+    <p><q>Do you have a boyfriend?</q> <q>Not really, because I'm a mass murderer!</p>
+    <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=KeSm9qPBSJM#t=1367">TotalBiscuit is the Prettiest Prettiest Princess - Part 1</a></cite></small>
+</blockquote>
+
+<blockquote>
+    <p>This is anime senpai bullshit... san... kun... the second.</p>
+    <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=SJqTWOWbOFg#t=2078">TotalBiscuit is the Prettiest Prettiest Princess - Part 2</a></cite></small>
 </blockquote>
 
 <h2>Dodger</h2>
