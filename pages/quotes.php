@@ -53,6 +53,11 @@
     <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=SJqTWOWbOFg#t=2078">TotalBiscuit is the Prettiest Prettiest Princess - Part 2</a></cite></small>
 </blockquote>
 
+<blockquote>
+    <p>This is a research stream! We're supposed to be doing research! This is not an <q>emasculate TotalBiscuit in front of six thousand people</q> stream &ndash; not all the time anyway &ndash; go get my iPad.</p>
+    <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=1a3rwO_tl18#t=1285">WTF Research : TB &amp; Genna Play Kingdom Rush - Part 1 </a></cite></small>
+</blockquote>
+
 <h2>Dodger</h2>
 <blockquote>
     <p>
