@@ -58,6 +58,8 @@
     <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=1a3rwO_tl18#t=1285">WTF Research : TB &amp; Genna Play Kingdom Rush - Part 1 </a></cite></small>
 </blockquote>
 
+<p>TotalBiscuit talking French in <cite><a href="http://www.youtube.com/watch?v=wvvwYanzSWg#t=252">The Mailbox with TotalBiscuit #3</a></cite></p>
+
 <h2>Dodger</h2>
 <blockquote>
     <p>
