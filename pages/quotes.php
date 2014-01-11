@@ -60,6 +60,11 @@
 
 <p>TotalBiscuit talking French in <cite><a href="http://www.youtube.com/watch?v=wvvwYanzSWg#t=252">The Mailbox with TotalBiscuit #3</a></cite></p>
 
+<blockquote>
+    <p>What can I say, I'm an expert at blowing.</p>
+    <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=wvvwYanzSWg#t=1068">The Mailbox with TotalBiscuit #3</a></cite></small>
+</blockquote>
+
 <h2>Dodger</h2>
 <blockquote>
     <p>
