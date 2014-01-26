@@ -129,6 +129,10 @@ usort($series, function($x, $y) {
         </strong>
         <p>
             Also watch the <del>The Game Station</del> <ins><a href="http://www.youtube.com/Polaris">The Co-optional podcast</a></ins>.
+
+    <li><strong><a href="https://twitter.com/Silent0siris">Steven Lumpkin</a>
+        <p>
+            For GM'ing <a href="http://www.youtube.com/user/itmeJP">RollPlay</a> Dark Heresy and R&D.
 </ul>
 
 <h1>PC Specs</h1>
