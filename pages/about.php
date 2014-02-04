@@ -80,7 +80,6 @@ usort($series, function($x, $y) {
     <li><a href="http://www.fearswe.net/">Lord Fear</a>
     <li><a href="http://www.team-metro.net/">Wingar</a>
     <li><a href="http://fundamentalscarf.se/">FundamScarf</a>
-    <li><a href="http://jennifoxi.tumblr.com/">Jenni</a>
 </ul>
 
 <h1 id="tv">TV series</h1>
