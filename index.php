@@ -69,6 +69,9 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800">
 <link rel="stylesheet" type="text/css" href="webkitsucks.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+<?php if (mt_rand(0,1000) == 0) { ?>
+<link rel="stylesheet" type="text/css" href="/assets/aurebesh.css">
+<?php } ?>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <script src="includes/jquery-1.9.1.min.js"></script>
 <script src="includes/konami.js"></script>

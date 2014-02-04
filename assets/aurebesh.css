@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "Aurebesh";
+	src: local("AureTechINV"), 
+		local("AureTech"), 
+		local("Aurebesh"), 
+		url("/assets/AureTechINV.otf");
+}
+
+
+* {
+	font-family: Aurebesh, "Segoe UI", sans-serif !important;
+}
