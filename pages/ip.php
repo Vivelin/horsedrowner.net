@@ -7,7 +7,7 @@ else if (isset($_SERVER["HTTP_X_FORWARDED_FOR"]))
 ?>
 <dl>
     <dt>IP address
-    <dd><?php echo $ip;?><em>  	
+    <dd><?php echo $ip;?>	
 
     <dt>User agent
     <dd><?php echo $_SERVER["HTTP_USER_AGENT"];?> 
