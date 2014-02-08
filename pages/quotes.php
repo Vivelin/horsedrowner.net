@@ -19,6 +19,13 @@
         Elevator Philosophy</a></cite> by <a href="http://www.youtube.com/user/wowcrendor">Wowcrendor</a></small>
 </blockquote>
 
+<h2>Crendor</h2>
+<h3>Mystery Woman</h3>
+<blockquote>
+    <p>Can you personal space bubble? There's a bubble around me, can you not... you're poking it. You're poking it. You popped it. Fuck you.</p>
+    <small>Mystery Woman in <cite><a href="http://www.youtube.com/watch?v=WbQ9eT5Fljc">Non + Content = The Sum of Content over Pi Squared</a></cite></small>
+</blockquote>
+
 <h2>Nika Harper</h2>
 <blockquote>
     <p>I liked teenage pregnancy as well.</p>
