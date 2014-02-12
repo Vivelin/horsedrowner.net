@@ -135,34 +135,10 @@ usort($series, function($x, $y) {
 </ul>
 
 <h1>PC Specs</h1>
-<dl>
-    <dt>Case
-    <dd>Obsidian 650D
-
-    <dt>Motherboard
-    <dd>Asus P8Z68-V Pro
-
-    <dt>CPU
-    <dd>Intel Core i5 2500K
-
-    <dt>RAM
-    <dd>G.Skill 8 GB DDR3-1600
-
-    <dt>Graphics
-    <dd>SAPPHIRE AMD Radeon R9 290
-
-    <dt>SSD
-    <dd>Crucial M4 128 GB
-
-    <dt>HDD
-    <dd>Samsung Spinpoint F3 1 TB
-
-    <dt>PSU
-    <dd>Corsair TX750M
-
-    <dt>Keyboard
-    <dd>Das Keyboard Professional Silent
-
-    <dt>Mouse
-    <dd>Logitech G500
-</dl>
+<?php
+    $file = file_get_contents("data/specs.json");
+    Debug::Dump($file);
+    $json = json_decode($file, true);
+    Debug::WriteLine(json_last_error());
+    Pretty::PrintData($json);
+?>

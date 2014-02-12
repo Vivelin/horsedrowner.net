@@ -153,4 +153,31 @@ class Pretty
     {
         print self::YouTube("vElbh2Ox1dA", 960, 540, 11, true, true, true);
     }
+
+    static function PrintData($obj)
+    {
+    	if (!$obj) return;
+
+    	print "<dl>\n";
+    	foreach ($obj as $key => $value)
+    	{
+    		if ($value)
+    		{
+    			print "\t<dt>" . htmlspecialchars($key);
+    			if (is_array($value))
+    			{
+    				foreach ($value as $item)
+    				{
+    					print "<dd>" . htmlspecialchars($item);
+    				}
+    			}
+    			else
+    			{
+    				print "<dd>" . htmlspecialchars($value);
+    			}
+    			print "\n";
+    		}
+    	}
+    	print "</dl>\n";
+    }
 }

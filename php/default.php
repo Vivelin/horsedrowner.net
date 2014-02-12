@@ -18,8 +18,11 @@ function exception_handler($exception) {
     ob_end_clean(); 
 
     // Show a 500 page instead
-    header("HTTP/1.1 500 Internal Server Error");
-    include "500.htm";
+    try {
+        header("HTTP/1.1 500 Internal Server Error");
+        include "500.htm";
+    }
+    catch (Exception $e) {}
     exit();
 }
 
@@ -28,4 +31,5 @@ set_exception_handler("exception_handler");
 spl_autoload_register(function ($class) {
     include "php/" . $class . ".class.php";
 });
+ob_start();
     
