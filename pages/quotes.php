@@ -87,6 +87,11 @@
 </blockquote>
 
 <blockquote>
+    <p>I don't want to become one of those people, where whenever I'm like <q>I have a joke, how can I turn it into a meme I've seen</q></p>
+    <small>Day[9] in <cite><a href="http://www.youtube.com/watch?v=WkijAmW2UgQ">DAY[9] DAILY #681 - FUNDAY MONDAY - OFFENSIVE TURTLE TERRAN - P2</a></cite></small>
+</blockquote>
+
+<blockquote>
     <p>
         I knew as much about myself and what I wanted as I do about how to squeeze a fruit in a 
         grocery store and know if it's gonna be good in a meal. I still don't know; I'd pick up a 
