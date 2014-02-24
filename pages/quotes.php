@@ -101,6 +101,11 @@
     <small>Day[9] in <cite><a href="https://www.youtube.com/watch?v=CdLnuGAPNUg#t=198">Day[9] Story Time #5 - A High School Crush</a></cite></small>
 </blockquote>
 
+<blockquote>
+    <p>A cat is a fur-covered, finite automata.</p>
+    <small>Day[9] in <cite><a href="http://www.youtube.com/watch?v=8gAibLqp85Q#t=316">Day[9] Daily #667 - Funday Monday - 2v2 LIFT OFF - P3 </a></cite></small>
+</blockquote>
+
 <h2>TableTop</h2>
 <blockquote>
     <p>And the dragon goes <q>MUUURRRRDDDEEERRR!</q></p>
