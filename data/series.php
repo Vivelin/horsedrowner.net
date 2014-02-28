@@ -4,8 +4,8 @@ $series = array(
     array(
         "name" => "Game of Thrones",
         "season" => 3,
-        "episode" => 1,
-        "time" => "27-2-2014 23:21:58",
+        "episode" => 2,
+        "time" => "28-2-2014 21:56:35",
     ),
     array(
         "name" => "Firefly",
