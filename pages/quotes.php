@@ -72,6 +72,11 @@
     <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=wvvwYanzSWg#t=1068">The Mailbox with TotalBiscuit #3</a></cite></small>
 </blockquote>
 
+<blockquote>
+    <p>I'm going to use <em>my</em> AoE inefficiently! You can't tell me what to do, you're not my real mother!</p>
+    <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=rKCo6XlqLgo#t=2597">Hearthstone: Lord of the Gimmicks 1</a></cite></small>
+</blockquote>
+
 <h2>Dodger</h2>
 <blockquote>
     <p>
