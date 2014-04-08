@@ -52,32 +52,32 @@ html {
 body {
 	background: #fff;
 	color: #2d2d2d;
-	font-family: "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font-family: "Open Sans", "Segoe UI", "Segoe WP", sans-serif;
 	line-height: 1.4;
 	margin: 0;
 }
 
 h1 {
 	color: #1e90ff;
-	font: 300 2.5em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 300 2.5em "Exo 2.0", "Segoe WP", "Segoe UI", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 }
 
 h2 {
 	color: #1e90ff;
-	font: 300 1.8em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 300 1.8em "Exo 2.0", "Segoe WP", "Segoe UI", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 }
 
 h3 {
 	color: #1e90ff;
-	font: 900 1.2em "Segoe WP Black", "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 900 1.2em "Segoe WP Black", "Segoe WP", "Segoe UI", "Open Sans", sans-serif;
 	margin: 1em 0 .5em 0;
 	text-transform: uppercase;
 }
 
 h4 {
-	font: 100 1em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 100 1em "Exo 2.0", "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
 }
 
 p {
@@ -239,7 +239,9 @@ a.button:not([href]) {
 .alert {
 	background-color: #d81102;
 	color: #ffffff;
-	font-weight: 700;
+	font-family: "Exo 2.0", "Segoe WP", "Segoe UI", "Open Sans", sans-serif;
+	font-size: 1.0em;
+	font-weight: 600;
 	margin: 0;
 	padding: .2em .5em;
 }
@@ -332,7 +334,7 @@ dd {
 
 .nav li {
 	float: left;
-	font: 300 2.1em "Segoe UI", "Segoe WP", "Open Sans", sans-serif;
+	font: 300 2.1em "Exo 2.0", "Segoe WP", "Segoe UI", "Open Sans", sans-serif;
 	line-height: 1.2;
 	margin-right: 0.5em;
 }
@@ -377,7 +379,8 @@ dd {
 .avatar img.offline { border-left: none; }
 
 .title {
-	font-weight: bold;
+	font-family: "Segoe UI", "Open Sans", sans-serif;
+	font-weight: 700;
 	text-transform: uppercase;
 	color: #999999;
 }
@@ -396,7 +399,7 @@ dd {
 
 .login-id {
 	float: right;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 	color: #2d2d2d;
 }

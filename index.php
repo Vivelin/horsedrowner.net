@@ -66,7 +66,8 @@
 <meta name="msapplication-navbutton-color" content="#254A88">
 <meta name="msapplication-TileImage" content="curly-144px.png">
 <meta name="msapplication-TileColor" content="#254A88">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo+2:300,400,600,700" >
 <link rel="stylesheet" type="text/css" href="webkitsucks.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <?php if (mt_rand(0,1000) == 0) { ?>
