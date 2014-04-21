@@ -117,6 +117,11 @@
     <small>Wil Wheaton in <cite><a href="http://www.youtube.com/watch?v=IHHrWxQoAxo#t=3996">TableTop Extended Edition: Small World</a></cite></small>
 </blockquote>
 
+<blockquote>
+    <p>Don't panic. I mean, unless panicking throws you off your game and gives me a chance to win, in which case I encourage panic.</p>
+    <small>Wil Wheaton in <cite><a href="http://www.youtube.com/watch?v=nvuS51OJH-s#t=880">TableTop Extended: Qwirkle and 12 Days (Kelly Hu, Wil Wheaton, Meredith Salenger, and Nolan Kopp)</a></cite></small>
+</blockquote>
+
 <!-- http://www.youtube.com/watch?list=WLC5CCFC4618FE89FA&v=IHHrWxQoAxo&feature=player_detailpage#t=2185 -->
 
 
