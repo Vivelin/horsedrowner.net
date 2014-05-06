@@ -1,5 +1,10 @@
 <h2>Jesse Cox</h2>
 <blockquote>
+    <p>Alright brain, I see what you're doing here. Okay so if my theory is correct, this can go with this... thi&mdash; thi&mdash; Okay, back to the drawing board!</p>
+    <small>Jesse Cox in <cite><a href="http://www.youtube.com/watch?v=nc9n0U9_Nag">Yesterday [Part 5] - Thank You Nicolas Cage!!</a></cite></small>
+</blockquote>
+
+<blockquote>
     <p>Maybe I just don't cry that much, and I'm trying to make it seem like I'm really sensitive... 
         <em>ladies</em>. <i>I'm totally sensitive to my feminine side</i> 'cause I'd like to get 
         sensitive with <em>your</em> feminine side.</p>
@@ -130,6 +135,15 @@
     <p>OK, but think of it this way: shut up.</p>
     <small>Jeff "Joker" Moreau</small>
 </blockquote>
+
+<dialog>
+    <dt>Gunnery Chief</dt>  <dd><q>This, recruits, is a 20 kilo ferrous slug. Feel the weight! Every five seconds, the main gun of an Everest-class dreadnought accelerates one to 1.3 percent of light speed. It impacts with the force of a 38 kiloton bomb &mdash; that is three times the yield of the citybuster dropped on Hiroshima back on Earth. That means Sir Isaac Newton is the deadliest son of a bitch in space! Now, serviceman Burnside, what is Newton's first law?</q></dd>
+    <dt>Burnside</dt>       <dd><q>Sir, an object in motion stays in motion, sir!</q></dd>
+    <dt>Gunnery Chief</dt>  <dd><q>No credit for partial answers, maggot!</q></dd>
+    <dt>Burnside</dt><dd><q>Sir, unless acted on by an outside force, sir!</q><dd>
+    <dt>Gunnery Chief</dt>  <dd><q>Damn straight! I dare to assume you ignorant jackasses know that space is empty! Once you fire this hunk of metal, it keeps going 'till it hits something! That can be a ship, or the planet behind that ship. It might go off into deep space and hit somebody else in ten thousand years. If you pull the trigger on this, you are ruining someone's day, somewhere and sometime! That is why you check your damn targets. That is why you wait for the computer to give you a damn firing solution! That is why, serviceman Chung, we do not <q>eyeball it</q>! This is a weapon of mass destruction! You are not a cowboy shooting from the hip!</q></dd>
+    <dt>Chung</dt>          <dd><q>Sir, yes sir!</q></dd>
+</dialog>
 
 <h2>Elementary</h2>
 <blockquote>
