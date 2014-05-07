@@ -41,7 +41,8 @@ $series = array(
     array(
         "name" => "Star Wars: The Clone Wars",
         "season" => 1,
-        "episode" => 8,
-        "time" => "12-1-2014 22:37:15",
+        "episode" => 13,
+        "episodename" => "Jedi Crash",
+        "time" => "7-5-2014 22:18:22",
     ),
 );
