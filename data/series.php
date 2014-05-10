@@ -40,9 +40,9 @@ $series = array(
     ),
     array(
         "name" => "Star Wars: The Clone Wars",
-        "season" => 1,
-        "episode" => 16,
-        "episodename" => "The Hidden Enemy",
-        "time" => "8-5-2014 22:43:39",
+        "season" => 2,
+        "episode" => 3,
+        "episodename" => "Children of the Force",
+        "time" => "10-5-2014 20:57:59",
     ),
 );
