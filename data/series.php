@@ -41,8 +41,8 @@ $series = array(
     array(
         "name" => "Star Wars: The Clone Wars",
         "season" => 2,
-        "episode" => 3,
-        "episodename" => "Children of the Force",
-        "time" => "10-5-2014 20:57:59",
+        "episode" => 5,
+        "episodename" => "Landing at Point Rain",
+        "time" => "11-5-2014 21:58:18",
     ),
 );
