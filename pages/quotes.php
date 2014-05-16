@@ -98,7 +98,7 @@
 
 <blockquote>
     <p>I don't want to become one of those people, where whenever I'm like <q>I have a joke, how can I turn it into a meme I've seen</q></p>
-    <small>Day[9] in <cite><a href="http://www.youtube.com/watch?v=WkijAmW2UgQ">DAY[9] DAILY #681 - FUNDAY MONDAY - OFFENSIVE TURTLE TERRAN - P2</a></cite></small>
+    <small>Day[9] in <cite><a href="http://www.youtube.com/watch?v=WkijAmW2UgQ#t=373">DAY[9] DAILY #681 - FUNDAY MONDAY - OFFENSIVE TURTLE TERRAN - P2</a></cite></small>
 </blockquote>
 
 <blockquote>
