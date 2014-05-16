@@ -34,7 +34,7 @@
 <h2>Nika Harper</h2>
 <blockquote>
     <p>I liked teenage pregnancy as well.</p>
-    <small>Nika Harper during Dodger's <cite>Treat Peoples Like Peoples</cite> charity live stream</cite></small>
+    <small>Nika Harper during Dodger's <cite>Treat Peoples Like Peoples</cite> charity live stream</small>
 </blockquote>
 
 <h2 id="totalbiscuit">TotalBiscuit</h2>
@@ -45,7 +45,7 @@
 </blockquote>
 
 <blockquote>
-    <p><q>What's all that noise outside? Who's here?</q> It's me, the big giant horse schlong.</p>
+    <p><q>What's all that noise outside? Who's here?</q> It's me, the big giant horse schlong.</q></p>
     <p>Oh, my cousins, aunt and uncle horseschlong senpai are here &ndash; Ow, stop hitting me!</p>
     <small>TotalBiscuit in <cite><a href="http://www.youtube.com/watch?v=KeSm9qPBSJM#t=902">TotalBiscuit is the Prettiest Prettiest Princess - Part 1</a></cite></small>
 </blockquote>
