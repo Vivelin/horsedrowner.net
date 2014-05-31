@@ -313,8 +313,8 @@ li > p {
 	margin: 0;
 }
 
-dl, dialog {
-	margin: 1em 0;
+dl, .dialog {
+	margin: 2em 0;
 }
 
 dt {
@@ -325,6 +325,15 @@ dt {
 dd {
 	padding-left: 120px;
 	line-height: 1.5;
+}
+
+.dialog p {
+	margin: 0;
+	line-height: 1.75;
+}
+
+.dialog b {
+	font-weight: 600;
 }
 
 .nav {

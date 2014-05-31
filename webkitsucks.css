@@ -40,15 +40,3 @@ Semilight to an appropriate font-weight.
     font-weight: 700;
     src: local("Segoe UI Bold Italic");
 }
-
-/*
- * What the fuck, Chrome? http://bit.ly/OXGzDy
- */
-dialog {
-    background-color: inherit;
-    border: none;
-    color: inherit;
-    display: block;
-    padding: 0;
-    position: static;
-}

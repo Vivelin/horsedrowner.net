@@ -136,14 +136,34 @@
     <small>Jeff "Joker" Moreau</small>
 </blockquote>
 
-<dialog>
-    <dt>Gunnery Chief</dt>  <dd><q>This, recruits, is a 20 kilo ferrous slug. Feel the weight! Every five seconds, the main gun of an Everest-class dreadnought accelerates one to 1.3 percent of light speed. It impacts with the force of a 38 kiloton bomb &mdash; that is three times the yield of the citybuster dropped on Hiroshima back on Earth. That means Sir Isaac Newton is the deadliest son of a bitch in space! Now, serviceman Burnside, what is Newton's first law?</q></dd>
-    <dt>Burnside</dt>       <dd><q>Sir, an object in motion stays in motion, sir!</q></dd>
-    <dt>Gunnery Chief</dt>  <dd><q>No credit for partial answers, maggot!</q></dd>
-    <dt>Burnside</dt><dd><q>Sir, unless acted on by an outside force, sir!</q><dd>
-    <dt>Gunnery Chief</dt>  <dd><q>Damn straight! I dare to assume you ignorant jackasses know that space is empty! Once you fire this hunk of metal, it keeps going 'till it hits something! That can be a ship, or the planet behind that ship. It might go off into deep space and hit somebody else in ten thousand years. If you pull the trigger on this, you are ruining someone's day, somewhere and sometime! That is why you check your damn targets. That is why you wait for the computer to give you a damn firing solution! That is why, serviceman Chung, we do not <q>eyeball it</q>! This is a weapon of mass destruction! You are not a cowboy shooting from the hip!</q></dd>
-    <dt>Chung</dt>          <dd><q>Sir, yes sir!</q></dd>
-</dialog>
+<div class="dialog">
+    <p><b>Gunnery Chief</b>: This, recruits, is a 20 kilo ferrous slug. Feel the weight! Every five seconds, the main gun of an Everest-class dreadnought accelerates one to 1.3 percent of light speed. It impacts with the force of a 38 kiloton bomb &mdash; that is three times the yield of the citybuster dropped on Hiroshima back on Earth. That means Sir Isaac Newton is the deadliest son of a bitch in space! Now, serviceman Burnside, what is Newton's first law?</p>
+    <p><b>Serviceman Burnside</b>: Sir, an object in motion stays in motion, sir!</p>
+    <p><b>Gunnery Chief</b>: No credit for partial answers, maggot!</p>
+    <p><b>Serviceman Burnside</b>: Sir, unless acted on by an outside force, sir!</p>
+    <p><b>Gunnery Chief</b>: Damn straight! I dare to assume you ignorant jackasses know that space is empty! Once you fire this hunk of metal, it keeps going 'till it hits something! That can be a ship, or the planet behind that ship. It might go off into deep space and hit somebody else in ten thousand years. If you pull the trigger on this, you are ruining someone's day, somewhere and sometime! That is why you check your damn targets. That is why you wait for the computer to give you a damn firing solution! That is why, serviceman Chung, we do not eyeball it! This is a weapon of mass destruction! You are not a cowboy shooting from the hip!</p>
+    <p><b>Serviceman Chung</b>: Sir, yes sir!</p>
+</div>
+
+<div class="dialog">
+    <p><b>Annoyed Human</b>: Come on, let me in!</p>
+    <p><b>Annoyed Human</b>: Aria's expecting me! Ugh.</p>
+    <p><b>Bouncer</b>: Annoyed: If she were expecting you, you'd be inside.</p>
+    <p><b>Annoyed Human</b>: You've let ten people in while I've been standing here!</p>
+    <p><b>Bouncer</b>: Uncaring: They were VIPs.</p>
+    <p><b>Annoyed Human</b>: Can you even see me over here?</p>
+    <p><b>Annoyed Human</b>: Don't you know who I am?</p>
+    <p><b>Bouncer</b>: Matter-of-factly: No. Get in line.</p>
+    <p><b>Annoyed Human</b>: Look. I'll pay you. I'm prepared to offer you 50 credits.</p>
+    <p><b>Bouncer</b>: With apparent interest: Double it.</p>
+    <p><b>Annoyed Human</b>: Okay. 100 credits!</p>
+    <p><b>Bouncer</b>: Amused: Double it.</p>
+    <p><b>Annoyed Human</b>: Er... 200 credits?</p>
+    <p><b>Bouncer</b>: Assertively: No. Get back in line.</p>
+    <p><b>Annoyed Human</b>: I've had enough of this! Let me inside or I'll smash that smelly ass you call a face!</p>
+    <p><b>Bouncer</b>: With barely constrained menace: Try it.</p>
+    <p><b>Annoyed Human</b>: Whatever. I don't want to go in there, anyway.</p>
+</div>
 
 <h2>Elementary</h2>
 <blockquote>
@@ -164,32 +184,21 @@
     <small>Claptrap in <cite>Borderlands 2</cite></small>
 </blockquote>
 
-<dialog>
-    <dt>Mordecai</dt>   <dd><q>Wait, why the hell are we playing this kid's game?</q></dd>
-    <dt>Tiny Tina</dt>  <dd><q>Oh you know maybe because <strong>SHUT THE HELL UP MORDY</strong> —</q></dd>
-    <dt>Lilith</dt>     <dd><q>— Tina! She's right though, shut up.</q></dd>
+<div class="dialog">
+    <p><b>Mordecai</b>: Wait, why the hell are we playing this kid's game?</p>
+    <p><b>Tiny Tina</b>: Oh you know maybe because <strong>SHUT THE HELL UP MORDY</strong> —</p>
+    <p><b>Lilith</b>: — Tina! She's right though, shut up.</p>
     <small><cite><a href="https://www.youtube.com/watch?v=sBKJSDH2zE0#t=48s">Tiny Tina's Assault on Dragon Keep</a></cite></small>
-</dialog>
+</div>
 
 <h2>Star Wars: Knights of the Old Republic</h2>
 <h3>Calo Nord introduction</h3>
-<dialog>
-    <dt>Calo Nord</dt>  <dd><q>Go away.</q></dd>
-    <dt>Player</dt>     <dd><q>I saw how you mopped up those Black Vulkars. Nice work.</q></dd>
-    <dt>Calo Nord</dt>  <dd><q>One.</q></dd>
-    <dt>Player</dt>     <dd><q>I'm not looking for a fight. I just want to talk.</q></dd>
-    <dt>Calo Nord</dt>  <dd><q>Two.</q></dd>
-    <dt>Player</dt>     <dd><q>Okay, I see your point. I'll be off, then.</q></dd>
-    <dt>Calo Nord</dt>  <dd><q>Smart.</q></dd>
-</dialog>
-
-<h2>Scrubs</h2>
-<h3>Show me boobs!</h3>
-<dialog>
-    <dt>Louie</dt>  <dd><q>Guys, we need an answer. Name one thing guys wanna see more then anything in the whole wide world.</q></dd>
-    <dt>JD</dt>     <dd><q>Uhm, okay Louie, we're gonna go with <q>Boobs</q>.</q></dd>
-    <dt>Louie</dt>  <dd><q>Show me boobs!</q></dd>
-    <dt></dt>       <dd>*ding*</dd>
-    <dt>Louie</dt>  <dd><q>There they are!</q></dd>    
-</dialog>
-<p><a href="http://youtu.be/LqPVksZgD3w">Source video</a></p>
+<div class="dialog">
+    <p><b>Calo Nord</b>: Go away.</p>
+    <p><b>Player</b>: I saw how you mopped up those Black Vulkars. Nice work.</p>
+    <p><b>Calo Nord</b>: One.</p>
+    <p><b>Player</b>: I'm not looking for a fight. I just want to talk.</p>
+    <p><b>Calo Nord</b>: Two.</p>
+    <p><b>Player</b>: Okay, I see your point. I'll be off, then.</p>
+    <p><b>Calo Nord</b>: Smart.</p>
+</div>
