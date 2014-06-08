@@ -255,8 +255,13 @@ a.button:not([href]) {
 	white-space: nowrap;
 }
 
-.alert img {
+.alert .lastfm-logo {
 	height: 1.5ex;
+}
+
+.alert .load-indicator {
+	vertical-align: -2px;
+	display: none;
 }
 
 .tile {

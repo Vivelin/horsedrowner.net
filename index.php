@@ -78,8 +78,8 @@
 <script src="includes/konami.js"></script>
 <title>horsedrowner.net</title>
 
-<p id="nowplaying" class="alert" <?php if ($nowPlaying == null) echo "style=\"display: none;\""; ?>>
-    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"> <span><?php Pretty::Write($nowPlaying); ?></span></a>
+<p id="nowplaying" class="alert" <?php if (true && $nowPlaying == null) echo "style=\"display: none;\""; ?>>
+    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img class="lastfm-logo" src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"> <span><?php Pretty::Write($nowPlaying); ?></span> <img class="load-indicator" src="loading.gif"></a>
 </p>
 
 <div class="header">
@@ -125,7 +125,9 @@
 </div>
 <script>
 function updateStatus() {
+    $("#nowplaying .load-indicator").show();
     $.getJSON("status.php", function(json) {
+        $("#nowplaying .load-indicator").hide();
         if (typeof json.error == "undefined" && json.onlineState && json.stateMessage)
         {
             if (json.nowPlaying) {
