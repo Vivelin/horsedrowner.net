@@ -79,7 +79,7 @@
 <title>horsedrowner.net</title>
 
 <p id="nowplaying" class="alert" <?php if (true && $nowPlaying == null) echo "style=\"display: none;\""; ?>>
-    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img class="lastfm-logo" src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"> <span><?php Pretty::Write($nowPlaying); ?></span> <img class="load-indicator" src="loading.gif"></a>
+    <a href="<?php echo $nowPlayingLink ?>" target="_blank"><img class="lastfm-logo" src="lastfm.png" alt="Last.fm" title="Now playing on Last.fm"> <span><?php Pretty::Write($nowPlaying); ?></span> <img class="load-indicator" src="loading-red.gif"></a>
 </p>
 
 <div class="header">
@@ -93,7 +93,8 @@
     <div class="titlebar">
         <span id="title" class="title <?php Pretty::Write($stateClass);?>">
             <?php Pretty::Write($stateMessage);?>
-        </span>
+        </span> 
+        <img id="title-load" class="load-indicator" src="loading-grey.gif">
         <ul class="nav">
     <?php         
     //Add all available pages to the nav bar thingy
@@ -125,9 +126,13 @@
 </div>
 <script>
 function updateStatus() {
-    $("#nowplaying .load-indicator").show();
+    // $("#nowplaying .load-indicator").show();
+    $("#title-load").show();
+    
     $.getJSON("status.php", function(json) {
-        $("#nowplaying .load-indicator").hide();
+        // $("#nowplaying .load-indicator").hide();
+        $("#title-load").hide();
+
         if (typeof json.error == "undefined" && json.onlineState && json.stateMessage)
         {
             if (json.nowPlaying) {

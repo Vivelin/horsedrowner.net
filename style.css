@@ -259,7 +259,7 @@ a.button:not([href]) {
 	height: 1.5ex;
 }
 
-.alert .load-indicator {
+.load-indicator {
 	vertical-align: -2px;
 	display: none;
 }
