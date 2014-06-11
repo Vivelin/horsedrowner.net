@@ -43,18 +43,20 @@
     $nowPlayingLink = "";
 
     $jsonSteam = Status::getCached("status_steam.txt");
-    if (!$jsonSteam) {
-        $stateMessage = $jsonSteam["stateMessage"];
-        $stateClass = $jsonSteam["onlineState"];
+    if ($jsonSteam) {
+        $statusSteam = json_decode($jsonSteam, true);
+        $stateMessage = $statusSteam["stateMessage"];
+        $stateClass = $statusSteam["onlineState"];
         if ($stateClass === "in-game") {
             $stateClass = "ingame";
         }
     }
 
     $jsonLastfm = Status::getCached("status_lastfm.txt");
-    if (!$jsonLastfm) {
-        $nowPlaying = $jsonLastfm["nowPlaying"];
-        $nowPlayingLink = $jsonLastfm["nowPlayingLink"];
+    if ($jsonLastfm) {
+        $statusLastfm = json_decode($jsonLastfm, true);
+        $nowPlaying = $statusLastfm["nowPlaying"];
+        $nowPlayingLink = $statusLastfm["nowPlayingLink"];
     }
 ?>
 <!DOCTYPE html>
@@ -174,8 +176,8 @@ function updateNowPlaying() {
     setTimeout(updateNowPlaying, 15000);
 }
 
-updateNowPlaying();
-updateStatus();
+// updateNowPlaying();
+// updateStatus();
 
 if (typeof Konami != 'undefined') {
     var konami = new Konami("/?p=safetydance");
