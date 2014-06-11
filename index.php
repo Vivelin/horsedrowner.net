@@ -42,18 +42,19 @@
     $nowPlaying = "";
     $nowPlayingLink = "";
 
-    if (file_exists("status.txt")) {
-        $json = @file_get_contents("status.txt");
-        if ($json !== false) {
-            $status = json_decode($json, true);
-            $stateMessage = $status["stateMessage"];
-            $nowPlaying = $status["nowPlaying"];
-            $nowPlayingLink = $status["nowPlayingLink"];
-            $stateClass = $status["onlineState"];
-            if ($stateClass === "in-game") {
-                $stateClass = "ingame";
-            }
+    $jsonSteam = Status::getCached("status_steam.txt");
+    if (!$jsonSteam) {
+        $stateMessage = $jsonSteam["stateMessage"];
+        $stateClass = $jsonSteam["onlineState"];
+        if ($stateClass === "in-game") {
+            $stateClass = "ingame";
         }
+    }
+
+    $jsonLastfm = Status::getCached("status_lastfm.txt");
+    if (!$jsonLastfm) {
+        $nowPlaying = $jsonLastfm["nowPlaying"];
+        $nowPlayingLink = $jsonLastfm["nowPlayingLink"];
     }
 ?>
 <!DOCTYPE html>
