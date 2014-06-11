@@ -126,23 +126,12 @@
 </div>
 <script>
 function updateStatus() {
-    // $("#nowplaying .load-indicator").show();
     $("#title-load").show();
-    
-    $.getJSON("status.php", function(json) {
-        // $("#nowplaying .load-indicator").hide();
+    $.getJSON("status.php?mode=steam", function(json) {
         $("#title-load").hide();
 
         if (typeof json.error == "undefined" && json.onlineState && json.stateMessage)
         {
-            if (json.nowPlaying) {
-                $("#nowplaying span").html(json.nowPlaying);
-                $("#nowplaying a").attr("href", json.nowPlayingLink);
-                $("#nowplaying").show();
-            } else {
-                $("#nowplaying").hide();
-            }
-
             $("#title").html(json.stateMessage);
             switch (json.onlineState) {
                 case "online":
@@ -160,9 +149,31 @@ function updateStatus() {
             }
         }
     });
+
     setTimeout(updateStatus, 10000);
 }
 
+function updateNowPlaying() {
+    $("#nowplaying .load-indicator").show();
+    $.getJSON("status.php?mode=lastfm", function(json) {
+        $("#nowplaying .load-indicator").hide();
+
+        if (typeof json.error == "undefined" && json.text)
+        {
+            if (json.text) {
+                $("#nowplaying span").html(json.text);
+                $("#nowplaying a").attr("href", json.link);
+                $("#nowplaying").show();
+            } else {
+                $("#nowplaying").hide();
+            }
+        }
+    });
+
+    setTimeout(updateNowPlaying, 10000);
+}
+
+updateNowPlaying();
 updateStatus();
 
 if (typeof Konami != 'undefined') {

@@ -3,3 +3,5 @@ config.php
 desktop.ini
 pull
 images/screenshots/
+status_lastfm.txt
+status_steam.txt

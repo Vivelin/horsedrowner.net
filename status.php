@@ -14,17 +14,29 @@ try {
     set_exception_handler("steam_json_exception_handler");
 
     if (isset($_GET["id"])) $id = $_GET["id"]; else $id = "76561197994245359";
+    if (isset($_GET["mode"])) $mode = $_GET["mode"]; else $mode = "steam";
+    $mode = preg_replace('/[^A-Za-z0-9\-]/', '', $mode);
 
-    if (file_exists("status.txt")) {
-        $diff = time() - filemtime("status.txt");
+    $filename = "status_" . $mode . ".txt";
+    if (file_exists($filename)) {
+        $diff = time() - filemtime($filename);
         if ($diff < 15) {
-            $json = Status::getCached();
+            $json = Status::getCached($filename);
         }
     }
 
     if (!isset($diff) || $diff >= 15 || $json === false) {
-        $status = new Status($steamApiKey, $id);
-        $json = $status->getStatusJson();
+        switch ($mode) {
+            case "lastfm":
+                $status = new Status($steamApiKey, $id, $lastfmAPI);
+                $json = $status->getLastfmJson();
+                break;
+            
+            default:
+                $status = new Status($steamApiKey, $id, $lastfmAPI);
+                $json = $status->getSteamJson();
+                break;
+        }
     }
 
     restore_exception_handler();

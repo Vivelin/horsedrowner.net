@@ -89,11 +89,10 @@ class Steam
 			foreach ($args as $key => $value) {
 				$url .= "&$key=$value";
 			}
-			Debug::WriteLine($url);
 
+			Debug::WriteLine($url);
 			$response = file_get_contents($url);
 			$data = json_decode($response);
-
 			Debug::Dump($data);
 
 			return $data;
