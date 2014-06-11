@@ -176,8 +176,8 @@ function updateNowPlaying() {
     setTimeout(updateNowPlaying, 15000);
 }
 
-// updateNowPlaying();
-// updateStatus();
+updateNowPlaying();
+updateStatus();
 
 if (typeof Konami != 'undefined') {
     var konami = new Konami("/?p=safetydance");
