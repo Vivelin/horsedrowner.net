@@ -150,7 +150,7 @@ function updateStatus() {
         }
     });
 
-    setTimeout(updateStatus, 10000);
+    setTimeout(updateStatus, 15000);
 }
 
 function updateNowPlaying() {
@@ -158,7 +158,7 @@ function updateNowPlaying() {
     $.getJSON("status.php?mode=lastfm", function(json) {
         $("#nowplaying .load-indicator").hide();
 
-        if (typeof json.error == "undefined" && json.text)
+        if (typeof json.error == "undefined")
         {
             if (json.text) {
                 $("#nowplaying span").html(json.text);
@@ -170,7 +170,7 @@ function updateNowPlaying() {
         }
     });
 
-    setTimeout(updateNowPlaying, 10000);
+    setTimeout(updateNowPlaying, 15000);
 }
 
 updateNowPlaying();
