@@ -55,8 +55,8 @@
     $jsonLastfm = Status::getCached("status_lastfm.txt");
     if ($jsonLastfm) {
         $statusLastfm = json_decode($jsonLastfm, true);
-        $nowPlaying = $statusLastfm["nowPlaying"];
-        $nowPlayingLink = $statusLastfm["nowPlayingLink"];
+        $nowPlaying = $statusLastfm["text"];
+        $nowPlayingLink = $statusLastfm["link"];
     }
 ?>
 <!DOCTYPE html>
