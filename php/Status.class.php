@@ -30,18 +30,22 @@ class Status
     
     //Returns a JSON-encoded string that represents the user's current status.
     public function getSteamJson() {
-        $data = array(
-            "onlineState" => $this->steam->GetStatusSimple($this->steamId),
-            "stateMessage" => $this->steam->GetName($this->steamId) . " - "
-                . $this->steam->GetStatus($this->steamId),
-        );
-        
-        $json = json_encode($data, JSON_HEX_TAG);
-        if (@file_put_contents("status_steam.txt", $json, LOCK_EX) === FALSE) {
-            // Nothing we can do about it.
-        }
+        $summary = $this->steam->GetPlayerSummary($this->steamId);
+        if ($summary)
+        {
+            $data = array(
+                "onlineState" => $this->steam->GetStatusSimple($this->steamId),
+                "stateMessage" => $this->steam->GetName($this->steamId) . " - "
+                    . $this->steam->GetStatus($this->steamId),
+            );
+            
+            $json = json_encode($data, JSON_HEX_TAG);
+            if (@file_put_contents("status_steam.txt", $json, LOCK_EX) === FALSE) {
+                // Nothing we can do about it.
+            }
 
-        return $json;
+            return $json;
+        }
     }
 
     public function getLastfmJson() 

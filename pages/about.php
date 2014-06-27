@@ -137,8 +137,6 @@ usort($series, function($x, $y) {
 <h1>PC Specs</h1>
 <?php
     $file = file_get_contents("data/specs.json");
-    Debug::Dump($file);
     $json = json_decode($file, true);
-    Debug::WriteLine(json_last_error());
     Pretty::PrintData($json);
 ?>

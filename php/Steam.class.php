@@ -24,6 +24,7 @@ class Steam
 	}
 
 	public function GetName($steamId64) {
+		Debug::WriteLine("GetName");
 		$summary = $this->GetPlayerSummary($steamId64);
 		if ($summary) {
 			return $summary->personaname;
@@ -32,6 +33,7 @@ class Steam
 	}
 
 	public function GetStatus($steamId64) {
+		Debug::WriteLine("GetStatus");
 		$summary = $this->GetPlayerSummary($steamId64);
 		if ($summary) {
 			if (isset($summary->gameid)) {
@@ -46,6 +48,7 @@ class Steam
 
 	public function GetStatusSimple($steamId64)
 	{
+		Debug::WriteLine("GetStatusSimple");
 		$summary = $this->GetPlayerSummary($steamId64);
 		if ($summary) {
 			if (isset($summary->gameid)) {
