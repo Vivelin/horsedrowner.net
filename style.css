@@ -103,9 +103,13 @@ a, a:link, a:visited {
 	text-decoration: none;
 }
 
-a:hover, a:active {
-	color: #1e90ff;
+a:hover {
 	text-decoration: underline;
+}
+
+a:focus, a:active {
+	color: hsl(0, 100%, 51%);
+	outline: none;
 }
 
 a img {
