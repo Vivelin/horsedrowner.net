@@ -6,7 +6,7 @@
     /* Configuration */
     date_default_timezone_set('Europe/Amsterdam');
     $ReqPageID = "about"; // Default page if nothing is requested
-    $avatar = "curly/dai/512px.jpg";
+    $avatar = ((mt_rand() % 2) == 0) ? "glitchai/x6t8gpb.gif" : "glitchai/BhTNGHK.gif";
     $avatar_title = "Curly Brace (Cave Story, drawn by daijitsu)";
 
     /* Load the page or 404 */
