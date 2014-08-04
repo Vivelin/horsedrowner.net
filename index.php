@@ -22,15 +22,15 @@
             exit();
         }
     }
-    
+
     /* Determine content modification date/time */
     $page_modified = time();
     $page_modified = filemtime("pages/$PageID.php");
     $index_modified = filemtime(__FILE__);
     header("Last-Modified: ".gmdate("D, d M Y H:i:s", max($index_modified, $page_modified))." GMT");
-    header("Content-type: text/html; charset=utf-8"); 
+    header("Content-type: text/html; charset=utf-8");
     header("Cache-Control: no-cache"); /* Can't cache with the status thing */
-    
+
     $Pages = [ "about", "projects", "quotes" ];
     if (!in_array($ReqPageID, $Pages)) {
         $Pages[] = $ReqPageID;
@@ -88,18 +88,18 @@
 <div class="header">
     <div class="avatar">
         <a href="/">
-            <img id="avatar" src="avatars/<?=$avatar?>" alt="" 
-                title="<?php Pretty::Write($avatar_title);?>" 
+            <img id="avatar" src="avatars/<?=$avatar?>" alt=""
+                title="<?php Pretty::Write($avatar_title);?>"
                 class="<?php Pretty::Write($stateClass);?>">
         </a>
     </div>
     <div class="titlebar">
         <span id="title" class="title <?php Pretty::Write($stateClass);?>">
             <?php Pretty::Write($stateMessage);?>
-        </span> 
+        </span>
         <img id="title-load" class="load-indicator" src="loading-grey.gif">
         <ul class="nav">
-    <?php         
+    <?php
     //Add all available pages to the nav bar thingy
     foreach ($Pages as $s) {
         if ($s === $ReqPageID) { $class = ' class="current"'; } else { $class = ''; }
@@ -111,7 +111,7 @@
         </ul>
     </div>
 </div>
-    
+
 <div class="content">
     <?php include "pages/$PageID.php";?>
 </div>
@@ -119,13 +119,13 @@
 <div class="footer">
     <p><a href="//s.horsedrowner.net">Images</a>
        &bull; <a href="ip">IP</a>
-       &bull; This page was last changed <?php print Pretty::DateTime($page_modified);?> 
+       &bull; This page was last changed <?php print Pretty::DateTime($page_modified);?>
        &bull; Powered by <a href="http://steampowered.com/">Steam</a> and <a href="http://www.last.fm/">Last.fm</a>
-<?php if (Debug::IsEnabled()) { ?> 
+<?php if (Debug::IsEnabled()) { ?>
     <pre>
-<?php print_r($_SERVER); ?> 
+<?php print_r($_SERVER); ?>
     </pre>
-<?php } ?> 
+<?php } ?>
 </div>
 <script>
 function updateStatus() {

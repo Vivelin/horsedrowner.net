@@ -1,13 +1,23 @@
 <?php
 
+function get_release_info($repo)
+{
+	$info = GitHubRelease::RequestLatest($repo);
+	return [
+		"version" => $info->version,
+		"download" => $info->download,
+	];
+}
+
+$superscrot = get_release_info("horsedrowner/Superscrot");
+
 $projects = [
 	[
 		"name" => "Superscrot",
 		"description" => "A better screenshot uploader.",
 		"status" => "Passive development",
-		"version" => "1.6.5",
-		"download64" => "https://github.com/horsedrowner/Superscrot/releases/download/v1.6.5/Superscrot-1.6.5.zip",
-		"download32" => "https://github.com/horsedrowner/Superscrot/releases/download/v1.6.5/Superscrot-1.6.5-x86.zip",
+		"version" => $superscrot["version"],
+		"download" => $superscrot["download"],
 		"source" => "https://github.com/horsedrowner/Superscrot",
 	],
 	[

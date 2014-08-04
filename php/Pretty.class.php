@@ -2,7 +2,7 @@
 /**
  * A collection of functions related to string formatting and printing to HTML.
  */
-class Pretty 
+class Pretty
 {
 	/**
 	 * Prints the specified text.
@@ -37,10 +37,15 @@ class Pretty
 	 * @param mixed $date	The date to format as string or as Unix timestamp.
 	 * @return string 		A string that represents the specified date.
 	 */
-	static function FormatDate($date) 
+	static function FormatDate($date)
 	{
 		if (!ctype_digit($date))
-			$date = strtotime($date);
+		{
+			if ($date instanceof DateTime)
+				$date = $date->getTimestamp();
+			else
+				$date = strtotime($date);
+		}
 		$date = getdate($date);
 
 		$format = "j M Y";
@@ -61,7 +66,7 @@ class Pretty
 	 */
 	static function DateTime($date)
 	{
-		$html = "<span class=\"datetime\" title=\"" . self::FormatDate($date) . "\">" 
+		$html = "<span class=\"datetime\" title=\"" . self::FormatDate($date) . "\">"
 		      . self::RelativeTime($date) . "</span>";
 		return $html;
 	}
@@ -75,7 +80,12 @@ class Pretty
 	static function RelativeTime($date)
 	{
 		if (!ctype_digit($date))
-			$date = strtotime($date);
+		{
+			if ($date instanceof DateTime)
+				$date = $date->getTimestamp();
+			else
+				$date = strtotime($date);
+		}
 
 		$diff = time() - $date;
 		if ($diff == 0)
@@ -131,16 +141,16 @@ class Pretty
 	 * @param string $v The video ID of the video.
      * @return string 	A string containing the HTML code for the YouTube video.
 	 */
-	static function YouTube($v, $width = 960, $height = 540, $start = NULL, $autoplay = false, 
-							$loop = false, $hide_controls = false) 
+	static function YouTube($v, $width = 960, $height = 540, $start = NULL, $autoplay = false,
+							$loop = false, $hide_controls = false)
 	{
         $src = "http://www.youtube-nocookie.com/embed/$v?rel=0&hd=1&theme=light";
-        
+
         if ($start) $src = $src."&start=$start";
         if ($autoplay) $src = $src."&autoplay=1";
         if ($loop) $src = $src."&playlist=$v&loop=1";
         if ($hide_controls) $src = $src."&controls=0&showinfo=0";
-        
+
         $src = htmlentities($src);
         return "<iframe width=\"$width\" height=\"$height\" src=\"$src\" style=\"border: none;\"></iframe>\n";
     }
@@ -149,7 +159,7 @@ class Pretty
      * We can dance if we want to, we can leave your friends behind.
      * 'Cause your friends don't dance and if they don't dance, well they're no friends of mine.
      */
-    static function SafetyDance() 
+    static function SafetyDance()
     {
         print self::YouTube("vElbh2Ox1dA", 960, 540, 11, true, true, true);
     }
