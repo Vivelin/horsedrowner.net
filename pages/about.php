@@ -1,4 +1,4 @@
-<?php 
+<?php
 function get_age() {
     return DateTime::createFromFormat('d/m/Y', '10/12/1991')->diff(new DateTime('now'))->y;
 }
@@ -46,12 +46,12 @@ usort($series, function($x, $y) {
 ?>
 
 <dl>
-    <dt>Name 
+    <dt>Name
     <dd>Ruben Verdoes <span class="nickname">(horsedrowner)</span>
 
-    <dt>Age     
+    <dt>Age
     <dd><?php echo get_age();?> <em>(10 december 1991)</em>
-        
+
     <dt>Occupation
     <dd><a href="http://www.liacs.nl/">Computer Science student</a> <em>since 2010</em>
     <dd><a href="http://www.decos.com/">Software Engineer</a> <em>since 2007</em>
@@ -67,11 +67,11 @@ usort($series, function($x, $y) {
 </dl>
 
 <p>
-    The name <span class="nickname">&ldquo;horsedrowner&rdquo;</span> was the name I came up with 
+    The name <span class="nickname">&ldquo;horsedrowner&rdquo;</span> was the name I came up with
     when I first registered an account online. That was in the game <em>Age&nbsp;of&nbsp;Mythology
-    </em>. The name was based on the Norse &ldquo;Hersir&rdquo; unit, which each has a unique, 
-    random name. Examples include <em>Ormr Boardmonger</em>, <em>Vigfus Manysmasher</em>, 
-    <em>Herjolfr Mammothbreaker</em>, and the first thing that came to my mind when registering an 
+    </em>. The name was based on the Norse &ldquo;Hersir&rdquo; unit, which each has a unique,
+    random name. Examples include <em>Ormr Boardmonger</em>, <em>Vigfus Manysmasher</em>,
+    <em>Herjolfr Mammothbreaker</em>, and the first thing that came to my mind when registering an
     account to play multiplayer was <span class="nickname">&ldquo;horsedrowner&rdquo;</span>. I have
     been using it ever since, so if you see the name anywhere, you can be sure it's me.
 
@@ -109,12 +109,12 @@ usort($series, function($x, $y) {
 <ul>
     <li><strong><a href="http://dbsoundworks.com/">Danny Baranowsky</a></strong>
         <p>
-            For doing the music from <a href="http://www.supermeatboy.com/">Super Meat Boy</a>, 
-            <a href="http://store.steampowered.com/app/113200/">The Binding of Isaac</a>, and the 
+            God of music. <a href="http://www.supermeatboy.com/">Super Meat Boy</a>,
+            <a href="http://store.steampowered.com/app/113200/">The Binding of Isaac</a>, the
             remastered music from <a href="http://store.steampowered.com/app/200900/">
-            Cave Story+</a>, and responding to emails (and quick at that!). Watch the <a href="http://www.design3.com/industry-insight/gdc-2012/item/2500-gdc-2012-interview-with-danny-baranowsky/2500-gdc-2012-interview-with-danny-baranowsky">
+            Cave Story+</a>, and <a href="http://store.steampowered.com/app/247080/">Crypt of the NecroDancer</a>. Watch the <a href="http://www.design3.com/industry-insight/gdc-2012/item/2500-gdc-2012-interview-with-danny-baranowsky/2500-gdc-2012-interview-with-danny-baranowsky">
             interview with Danny Baranowsky</a> on GDC2012.
-            
+
     <li><strong><a href="http://www.gordonmcneil.com/">Gordon McNeil</a></strong>
         <p>
             For doing the absolutely amazing <a href="http://store.steampowered.com/app/107310/">
