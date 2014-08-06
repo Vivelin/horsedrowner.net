@@ -1,0 +1,38 @@
+$page-font-family:    "Open Sans", "Segoe UI", sans-serif
+$page-color:          #333
+$page-text-color:     #eee
+$caption-font-family: "Exo 2.0", "Open Sans", "Segoe WP", "Segoe UI", sans-serif
+$caption-font-weight: 300
+
+html
+    background-color: $page-color
+    color: $page-text-color
+    font: 100% $page-font-family
+
+.caption
+    font-family:    $caption-font-family
+    font-weight:    $caption-font-weight
+
+h1
+    @extend .caption
+    font-size: 2.5em
+
+h2
+    @extend .caption
+    font-size: 2em
+
+h3
+    @extend .caption
+    font-size: 1.5em
+
+h4
+    @extend .caption
+    font-size: 1.2em
+
+h5
+    @extend .caption
+    font-size: 1em
+
+h6
+    @extend .caption
+    font-size: .8em

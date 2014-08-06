@@ -1,5 +1,6 @@
 require "sinatra"
 require "better_errors"
+require "sass"
 
 configure :development do
     use BetterErrors::Middleware
@@ -7,5 +8,10 @@ configure :development do
 end
 
 get '/' do
-    erb :index
+    @title = "horsedrowner.net"
+    erb :index, :layout => :page
+end
+
+get '/style.css' do
+    sass :style
 end
