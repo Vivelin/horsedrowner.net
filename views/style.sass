@@ -1,17 +1,89 @@
-$page-font-family:    "Open Sans", "Segoe UI", sans-serif
-$page-color:          #333
-$page-text-color:     #eee
-$caption-font-family: "Exo 2.0", "Open Sans", "Segoe WP", "Segoe UI", sans-serif
-$caption-font-weight: 300
+// Colors
+$page-color:                    white
+$page-text-color:               #2d2d2d
+$header-color:                  #2d2d2d
+$header-text-color:             #eee
+$header-inactive-text-color:    #999
+$primary-color:                 dodgerblue
+$steam-online-color:            #86b5d9
+$steam-ingame-color:            #8bc53f
+$steam-offline-color:           #898989
+
+// Fonts
+$page-font-family:              "Open Sans", "Segoe UI", sans-serif
+$page-font-weight:              400
+$caption-font-family:           "Exo 2.0", "Open Sans", "Segoe WP", "Segoe UI", sans-serif
+$caption-font-weight:           300
+$small-caption-font-family:     "Segoe WP", "Segoe UI", sans-serif
+$small-caption-font-weight:     700
+
+// Sizing
+$header-height: 120px
 
 html
     background-color: $page-color
     color: $page-text-color
-    font: 100% $page-font-family
+    font: $page-font-weight 100% $page-font-family
+
+body
+    margin: 0
+
+header
+    background-color: $header-color
+    color: $header-text-color
+    height: $header-height
+
+    .avatar
+        height: $header-height
+        float: left
+        margin: 0 1em 0 0
+
+    .avatar.online
+        border-left: 8px solid $steam-online-color
+
+    .avatar.in-game
+        border-left: 8px solid $steam-ingame-color
+
+    .title
+        color: $steam-offline-color
+        display: inline-block
+        font-family: $small-caption-font-family
+        font-weight: $small-caption-font-weight
+        font-size: 1em
+        text-transform: uppercase
+        margin: 1em 0 0 0
+
+    nav
+        ul
+            margin: 0
+            list-style: none
+            padding-left: 0
+
+        li
+            float: left
+            margin: 0 1em 0 0
+
+        a
+            color: $header-inactive-text-color
+            font-family: $caption-font-family
+            font-weight: $caption-font-weight
+            font-size: 2em
+
+        a.active
+            color: $header-text-color
+
+article
+    margin: 1em
+    max-width: 960px
+
+a
+    color: $primary-color
+    text-decoration: none
 
 .caption
-    font-family:    $caption-font-family
-    font-weight:    $caption-font-weight
+    font-family: $caption-font-family
+    font-weight: $caption-font-weight
+    color: $primary-color
 
 h1
     @extend .caption
@@ -36,3 +108,13 @@ h5
 h6
     @extend .caption
     font-size: .8em
+
+// Misc. classes
+.online
+    color: $steam-online-color
+
+.in-game
+    color: $steam-ingame-color
+
+.offline
+    color: $steam-offline-color

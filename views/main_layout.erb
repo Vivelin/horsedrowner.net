@@ -1,0 +1,23 @@
+<!doctype html>
+<title><%= @page %></title>
+<meta charset="utf-8">
+<meta author="Ruben Verdoes">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2:300">
+
+<header>
+    <img class="avatar" src="<%= settings.avatar %>" alt="">
+    <span id="display-name" class="title">horsedrowner</span>
+    <nav>
+        <ul>
+            <% settings.pages.each do |p| %>
+            <li><a href="/<%=p%>" <%= 'class="active"' if @page == p %>><%=p%></a>
+            <% end %>
+        </ul>
+    </nav>
+</header>
+
+<article class="content">
+    <%= yield %>
+</article>
