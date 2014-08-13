@@ -21,11 +21,13 @@ $small-caption-font-weight:     700
 $header-height: 120px
 
 html
-    background-color: $page-color
-    color: $page-text-color
+    background-color: $header-color
+    color: $header-text-color
     font: $page-font-weight 100% $page-font-family
 
 body
+    background-color: $page-color
+    color: $page-text-color
     margin: 0
 
 header
@@ -72,9 +74,16 @@ header
         a.active
             color: $header-text-color
 
-article
+main
     margin: 1em
     max-width: 960px
+
+footer
+    background-color: $header-color
+    color: $header-inactive-text-color
+    font-size: .8em
+    padding: .25em 1em
+    margin-top: 5em
 
 a
     color: $primary-color

@@ -1,5 +1,5 @@
 <!doctype html>
-<title><%= @page %></title>
+<title>horsedrowner.net</title>
 <meta charset="utf-8">
 <meta author="Ruben Verdoes">
 <link rel="stylesheet" href="/style.css">
@@ -14,10 +14,13 @@
             <% settings.pages.each do |p| %>
             <li><a href="/<%=p%>" <%= 'class="active"' if @page == p %>><%=p%></a>
             <% end %>
+            <%= "<li><a href=\"/#{ @page }\" class=\"active\">#{ @page }</a>" unless settings.pages.include?(@page) %>
         </ul>
     </nav>
 </header>
 
-<article class="content">
+<main>
     <%= yield %>
-</article>
+</main>
+
+<%= erb :footer %>
