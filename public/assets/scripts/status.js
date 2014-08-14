@@ -19,7 +19,7 @@ function updateSteam()
         }
     });
 
-    setTimeout(updateSteam, 14000);
+    setTimeout(updateSteam, 28000);
 }
 
 /**
@@ -45,7 +45,7 @@ function updateNowPlaying()
         }
     })
 
-    setTimeout(updateNowPlaying, 14000)
+    setTimeout(updateNowPlaying, 28000)
 }
 
 updateSteam();
