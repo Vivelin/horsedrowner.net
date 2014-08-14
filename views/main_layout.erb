@@ -1,14 +1,21 @@
+<% id = SteamId.new(settings.steamid) %>
+<% id.parse %>
 <!doctype html>
 <title>horsedrowner.net</title>
 <meta charset="utf-8">
 <meta author="Ruben Verdoes">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2:300">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2:300,600">
 
+<p id="nowplaying" class="alert">
+    <img src="/images/lastfm.png"> Danny Baranowsky - Zone 3-3 Hot (Shopkeeper)
+    <img id="nowplaying-loading" class="load-indicator hidden" src="/images/loading-red.gif" alt="...">
+</p>
 <header>
-    <img class="avatar" src="<%= settings.avatar %>" alt="">
-    <span id="display-name" class="title">horsedrowner</span>
+    <img id="avatar" class="avatar <%= id.status %>" src="<%= settings.avatar %>" alt="">
+    <span id="display-name" class="title <%= id.status %>"><%= id.state_message %></span>
+    <img id="display-name-loading" class="load-indicator hidden" src="/images/loading.gif" alt="...">
     <nav>
         <ul>
             <% settings.pages.each do |p| %>
@@ -24,3 +31,5 @@
 </main>
 
 <%= erb :footer %>
+
+<script src="/assets/scripts/status.js"></script>

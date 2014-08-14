@@ -5,6 +5,8 @@ $header-color:                  #2d2d2d
 $header-text-color:             #eee
 $header-inactive-text-color:    #999
 $primary-color:                 dodgerblue
+$alert-color:                   #d81102
+$alert-text-color:              white
 $steam-online-color:            #86b5d9
 $steam-ingame-color:            #8bc53f
 $steam-offline-color:           #898989
@@ -14,8 +16,8 @@ $page-font-family:              "Open Sans", "Segoe UI", sans-serif
 $page-font-weight:              400
 $caption-font-family:           "Exo 2.0", "Open Sans", "Segoe WP", "Segoe UI", sans-serif
 $caption-font-weight:           300
-$small-caption-font-family:     "Segoe WP", "Segoe UI", sans-serif
-$small-caption-font-weight:     700
+$small-caption-font-family:     $caption-font-family
+$small-caption-font-weight:     600
 
 // Sizing
 $header-height: 120px
@@ -40,10 +42,10 @@ header
         float: left
         margin: 0 1em 0 0
 
-    .avatar.online
+    .avatar.online, .avatar.away, .avatar.busy, .avatar.looking_to_trade, .avatar.looking_to_play
         border-left: 8px solid $steam-online-color
 
-    .avatar.in-game
+    .avatar.ingame
         border-left: 8px solid $steam-ingame-color
 
     .title
@@ -119,11 +121,29 @@ h6
     font-size: .8em
 
 // Misc. classes
-.online
-    color: $steam-online-color
+.online, .away, .busy, .looking_to_trade, .looking_to_play
+    color: $steam-online-color !important
 
-.in-game
-    color: $steam-ingame-color
+.ingame
+    color: $steam-ingame-color !important
 
 .offline
-    color: $steam-offline-color
+    color: $steam-offline-color !important
+
+.alert
+    background-color: $alert-color
+    color: $alert-text-color
+    font-family: $small-caption-font-family
+    font-weight: $small-caption-font-weight
+    margin: 0
+    padding: .2em .5em
+
+    img
+        height: 1.5ex
+
+.load-indicator
+    height: 16px !important
+    vertical-align: -2px
+
+.hidden
+    display: none

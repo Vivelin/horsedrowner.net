@@ -2,6 +2,8 @@ require "sinatra"
 require "better_errors"
 require "sass"
 require "redcarpet"
+require "yaml"
+require "./lib/steam_id"
 
 configure do
     set :views, {
@@ -21,8 +23,13 @@ configure do
         :footnotes          => true, # Parse footnotes[^1]
     }
 
-    set :avatar, "/images/avatars/curly-512px.jpg"
-    set :pages, ["about", "projects", "quotes"]
+    app_config = YAML.load_file("config/application.yml")
+    set :avatar, app_config["avatar_href"] || "/images/avatars/curly-512px.jpg"
+    set :pages, app_config["navbar_pages"] || [ "about" ]
+    set :steamid, app_config["steamid"] || 76561197994245359
+    set :steam_api_key, app_config["steam_api_key"]
+    set :lastfm_api_key, app_config["lastfm_api_key"]
+    set :lastfm_api_secret, app_config["lastfm_api_secret"]
 end
 
 configure :development do
@@ -40,6 +47,9 @@ helpers do
         super(folder, name, engine, &block)
     end
 
+    ##
+    # Determines the last modified date of the file corresponding to the specified template.
+    #
     def last_modified_date(name, engine)
         find_template settings.views, name, engine do |file|
             return File.mtime(file) if File.exists?(file)
@@ -47,6 +57,9 @@ helpers do
         Time.now
     end
 
+    ##
+    # Determines the last modified date of the specified page.
+    #
     def page_modified(name)
         [
             last_modified_date(name, Tilt[:markdown]),
@@ -55,6 +68,8 @@ helpers do
         ].max
     end
 
+    ##
+    # Determines the last modified date of the specified style.
     def style_modified(name)
         last_modified_date(name, Tilt[:sass])
     end
@@ -63,6 +78,14 @@ end
 get "/style.css" do
     last_modified style_modified(:main)
     sass :main
+end
+
+get "/status/steam" do
+    headers "Content-Type" => "application/json"
+
+    id = SteamId.new(settings.steamid)
+    id.api_key = settings.steam_api_key
+    JSON.generate(id.fetch)
 end
 
 get "/ip" do
