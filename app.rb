@@ -4,6 +4,7 @@ require "sass"
 require "redcarpet"
 require "yaml"
 require "./lib/steam_id"
+require "./lib/lastfm_user"
 
 configure do
     set :views, {
@@ -28,8 +29,8 @@ configure do
     set :pages, app_config["navbar_pages"] || [ "about" ]
     set :steamid, app_config["steamid"] || 76561197994245359
     set :steam_api_key, app_config["steam_api_key"]
+    set :lastfm_user, app_config["lastfm_user"]
     set :lastfm_api_key, app_config["lastfm_api_key"]
-    set :lastfm_api_secret, app_config["lastfm_api_secret"]
 end
 
 configure :development do
@@ -86,6 +87,14 @@ get "/status/steam" do
     id = SteamId.new(settings.steamid)
     id.api_key = settings.steam_api_key
     JSON.generate(id.fetch)
+end
+
+get "/status/lastfm" do
+    headers "Content-Type" => "application/json"
+
+    user = LastFmUser.new(settings.lastfm_user)
+    user.api_key = settings.lastfm_api_key
+    JSON.generate(user.fetch)
 end
 
 get "/ip" do

@@ -1,5 +1,9 @@
-<% id = SteamId.new(settings.steamid) %>
-<% id.parse %>
+<%
+id = SteamId.new(settings.steamid)
+np = LastFmUser.new(settings.lastfm_user)
+id.parse
+np.parse
+%>
 <!doctype html>
 <title>horsedrowner.net</title>
 <meta charset="utf-8">
@@ -8,14 +12,14 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2:300,600">
 
-<p id="nowplaying" class="alert">
-    <img src="/images/lastfm.png"> Danny Baranowsky - Zone 3-3 Hot (Shopkeeper)
-    <img id="nowplaying-loading" class="load-indicator hidden" src="/images/loading-red.gif" alt="...">
+<p id="nowplaying" class="alert" <%= 'style="display: none"' unless np.playing? %>>
+    <a><img src="/images/lastfm.png" alt="Last.fm"> <span><%= "#{ np.artist } - #{ np.name }" %></span>
+    <img id="nowplaying-loading" class="load-indicator" style="display: none" src="/images/loading-red.gif" alt="..."></a>
 </p>
 <header>
     <img id="avatar" class="avatar <%= id.status %>" src="<%= settings.avatar %>" alt="">
     <span id="display-name" class="title <%= id.status %>"><%= id.state_message %></span>
-    <img id="display-name-loading" class="load-indicator hidden" src="/images/loading.gif" alt="...">
+    <img id="display-name-loading" class="load-indicator" style="display: none" src="/images/loading.gif" alt="...">
     <nav>
         <ul>
             <% settings.pages.each do |p| %>
@@ -32,4 +36,5 @@
 
 <%= erb :footer %>
 
+<script src="/assets/scripts/jquery-2.1.1.min.js"></script>
 <script src="/assets/scripts/status.js"></script>
