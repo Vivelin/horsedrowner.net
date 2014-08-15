@@ -1,9 +1,13 @@
 // Colors
 $page-color:                    white
 $page-text-color:               #2d2d2d
+$page-inactive-text-color:      #999
 $header-color:                  #2d2d2d
 $header-text-color:             #eee
 $header-inactive-text-color:    #999
+$box-color:                     #eee
+$box-text-color:                #2d2d2d
+$box-inactive-text-color:       #999
 $primary-color:                 dodgerblue
 $alert-color:                   #d81102
 $alert-text-color:              white
@@ -73,6 +77,9 @@ header
             font-weight: $caption-font-weight
             font-size: 2em
 
+        a:hover
+            text-decoration: none
+
         a.active
             color: $header-text-color
 
@@ -91,6 +98,9 @@ a
     color: $primary-color
     text-decoration: none
 
+a:hover
+    text-decoration: underline
+
 .caption
     font-family: $caption-font-family
     font-weight: $caption-font-weight
@@ -102,23 +112,65 @@ h1
 
 h2
     @extend .caption
-    font-size: 2em
+    font-size: 1.6em
 
 h3
     @extend .caption
-    font-size: 1.5em
+    font-size: 1.25em
 
 h4
     @extend .caption
-    font-size: 1.2em
+    font-size: 1em
 
 h5
     @extend .caption
+    font-family: $small-caption-font-family
+    font-weight: $small-caption-font-weight
     font-size: 1em
+    text-transform: uppercase
 
 h6
     @extend .caption
+    font-family: $small-caption-font-family
+    font-weight: $small-caption-font-weight
     font-size: .8em
+    text-transform: uppercase
+
+blockquote
+    background-color: $box-color
+    color: $box-text-color
+    border-left: 8px solid $primary-color
+    padding: .5em 2em
+    margin-left: 2.5em
+
+    p
+        font-size: 1.2em
+
+dl
+    margin: 2em 0
+
+    dt
+        float: left
+        font-weight: 600
+
+    dd
+        padding-left: 120px
+        line-height: 1.5
+
+cite
+    display: inline-block // Fuck CSS.
+    color: $page-inactive-text-color
+    font-style: normal
+    font-size: .8em
+    margin-bottom: 1.5em
+
+cite:before
+    content: "Source: "
+
+hr
+    border: none
+    border-top: 2px solid $page-inactive-text-color
+    margin: 2em 0
 
 // Misc. classes
 .online, .away, .busy, .looking_to_trade, .looking_to_play

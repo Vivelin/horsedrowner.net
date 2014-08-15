@@ -1,7 +1,7 @@
 require "sinatra"
 require "better_errors"
 require "sass"
-require "redcarpet"
+require "kramdown"
 require "yaml"
 require "./lib/steam_id"
 require "./lib/lastfm_user"
@@ -12,17 +12,7 @@ configure do
         :sass => "styles",
         :default => "views"
     }
-    set :markdown, {
-        :no_intra_emphasis  => true, # no_emphasis_here
-        :tables             => true,
-        :fenced_code_blocks => true, # Parses blocks surrounded by ``` as code
-        :autolink           => true,
-        :strikethrough      => true, # ~~strikethrough~~
-        :lax_spacing        => true, # Don't require blank lines around HTML blocks
-        :superscript        => true, # super^(script)
-        :quote              => true, # Parse "quotes" as <q>quotes</q>
-        :footnotes          => true, # Parse footnotes[^1]
-    }
+    set :markdown, :smartypants => true
 
     app_config = YAML.load_file("config/application.yml")
     set :avatar, app_config["avatar_href"] || "/images/avatars/curly-512px.jpg"

@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "sinatra"
 gem "sass"
-gem "redcarpet"
+gem "kramdown"
 gem "json"
 gem "activesupport"
 

@@ -8,7 +8,16 @@ A better screenshot uploader.
 ![The screenshot preview dialog](http://s.horsedrowner.net/Superscrot/PreviewDialog.png)
 
 [Latest release](https://github.com/horsedrowner/Superscrot/releases/latest)
-&bullet; [GitHub repository](https://github.com/horsedrowner/Superscrot)
+&bull; [GitHub repository](https://github.com/horsedrowner/Superscrot)
+
+Steam Linkfilter Bypass
+=======================
+
+A Firefox add-on to bypass the "You are leaving Steam" notice.
+
+[Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/steam-linkfilter-bypass/)
+&bull; [GitHub repository](https://github.com/horsedrowner/BypassLinkfilter)
+
 
 horsedrowner.net
 ================
@@ -16,4 +25,4 @@ horsedrowner.net
 It's the site you're viewing right now!
 
 [Latest release](http://horsedrowner.net)
-&bullet; [GitHub repository](https://github.com/horsedrowner/horsedrowner.net)
+&bull; [GitHub repository](https://github.com/horsedrowner/horsedrowner.net)

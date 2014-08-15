@@ -111,12 +111,16 @@ class SteamId
             puts "Re-using response from #{ self.class.timestamp }"
             response = self.class.response
         else
-            puts "Requesting #{ api_url }..."
-            response_body = Net::HTTP.get(URI(api_url))
-            response = JSON.parse(response_body)
+            begin
+                puts "Requesting #{ api_url }..."
+                response_body = Net::HTTP.get(URI(api_url))
+                response = JSON.parse(response_body)
 
-            self.class.response = response
-            self.class.timestamp = Time.now
+                self.class.response = response
+                self.class.timestamp = Time.now
+            rescue
+                puts "Steam fucked up again"
+            end
         end
 
         parse
