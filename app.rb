@@ -3,8 +3,12 @@ require "better_errors"
 require "sass"
 require "kramdown"
 require "yaml"
+require "./lib/template_utils"
+require "./lib/name_utils"
 require "./lib/steam_id"
 require "./lib/lastfm_user"
+
+helpers TemplateUtils, NameUtils
 
 configure do
   set :views, {
@@ -26,44 +30,6 @@ end
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
-end
-
-helpers do
-  ##
-  # Overrides find_template to use different directories for different engines
-  #
-  def find_template(views, name, engine, &block)
-    _, folder = views.detect { |k,v| engine == Tilt[k] }
-    folder ||= views[:default]
-    super(folder, name, engine, &block)
-  end
-
-  ##
-  # Determines the last modified date of the file corresponding to the specified template.
-  #
-  def last_modified_date(name, engine)
-    find_template settings.views, name, engine do |file|
-      return File.mtime(file) if File.exists?(file)
-    end
-    Time.now
-  end
-
-  ##
-  # Determines the last modified date of the specified page.
-  #
-  def page_modified(name)
-    [
-      last_modified_date(name, Tilt[:markdown]),
-      last_modified_date(:main_layout, Tilt[:erb]),
-      last_modified_date(:footer, Tilt[:erb])
-    ].max
-  end
-
-  ##
-  # Determines the last modified date of the specified style.
-  def style_modified(name)
-    last_modified_date(name, Tilt[:sass])
-  end
 end
 
 get "/style.css" do
@@ -93,6 +59,11 @@ end
 
 get "/error" do
   raise "oops"
+end
+
+get "/name" do
+    headers "Content-Type" => "text/plain"
+    hersir_name
 end
 
 get "/:page?" do

@@ -1,0 +1,1 @@
+$("#hersir-name").load("/name");

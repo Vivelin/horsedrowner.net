@@ -4,9 +4,10 @@
 > [@horsedrowner](https://twitter.com/horsedrowner)  
 > Steam: [horsedrowner](http://steamcommunity.com/id/horsedrowner)
 
-The name "horsedrowner" is inspired from a certain unit in the game *Age of Mythology*, which had
-randomized names. The last name consisted of two halves, and "Horsedrowner" is one of the many
-[possibilities][hersir_names].
+The name "horsedrowner" is inspired from a certain unit in the game **Age of 
+Mythology**, which had randomized names. The last name consisted of two halves, 
+and "Horsedrowner" is one of the many [possibilities][hersir_names]. Another 
+example is <strong id="hersir-name">not loaded yet</strong>.
 
  [hersir_names]: http://aom.heavengames.com/cgi-bin/forums/display.cgi?action=st&fn=13&tn=26378&st=3#post4
 
