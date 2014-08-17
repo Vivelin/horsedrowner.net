@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>horsedrowner.net</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo+2:300">
+<style>
+	html {
+		font-family: "Exo 2.0", "Open Sans", "Segoe WP", "Segoe UI", sans-serif;
+		font-weight: 300;
+		font-size: 100%;
+		background-color: black;
+		color: #eee;
+	}
+
+	h1, h2 { font-weight: 300; }
+
+	h1 { font-size: 2.5em; }
+	h2 { font-size: 1.6em; }
+
+	p { 
+		color: #999;
+		font-size: 1.2em; 
+	}
+
+	a {
+		color: dodgerblue;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	main {
+		width: 960px;
+		margin: 0 auto;
+	}
+</style>
+
+<main>
+	<h1><a href="/">« horsedrowner.net</a></h1>
+	<iframe width="960" height="540" src="http://www.youtube-nocookie.com/embed/vElbh2Ox1dA?rel=0&amp;hd=1&amp;theme=light&amp;start=11&amp;autoplay=1&amp;playlist=vElbh2Ox1dA&amp;loop=1&amp;controls=0&amp;showinfo=0" style="border: none;"></iframe>
+
+	<h2><%= err_name %></h2>
+	<%= "<p>Details: #{ err_desc }</p>" if defined? err_desc %>
+</main>
