@@ -1,3 +1,4 @@
 <% @page = "ip" %>
-<p><strong>IP address</strong>: <span id="ip-address"><%= request.ip %></span></p>
+<% ip = request.env["HTTP_CF_CONNECTING_IP"] || request.ip %>
+<p><strong>IP address</strong>: <span id="ip-address"><%= ip %></span></p>
 <p><strong>User agent</strong>: <span id="user-agent"><%= request.user_agent %></span></p>
