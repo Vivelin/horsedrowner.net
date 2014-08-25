@@ -10,7 +10,7 @@ class Home
   end
 
   def live_streams
-    return @res unless @res.nil?
+    return @res["streams"] unless @res.nil?
 
     uri = URI("https://api.twitch.tv/kraken/streams/")
     uri.query = URI.encode_www_form(:channel => streams)
