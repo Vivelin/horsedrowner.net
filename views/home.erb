@@ -1,0 +1,20 @@
+<% @page = "home" %>
+
+<section>
+<h1> Live on Twitch </h1>
+<% if home.live_streams.empty? %>
+	<p>Nobody is streaming right now.</p>
+<% else %>
+	<% home.live_streams.each do |stream| %>
+	<div class="live twitch stream">
+		<i class="live icon" title="Live"></i> 
+		<a href="<%= stream["channel"]["url"] %>" 
+		   title="Playing <%= h stream["game"] %>">
+			<strong><%= h stream["channel"]["display_name"] %></strong>: 
+			<%= h stream["channel"]["status"] %>
+		</a>
+		<span class="viewers" title="Viewers"><%= h stream["viewers"] %></span>
+	</div>
+	<% end %>
+<% end %>
+</section>

@@ -36,4 +36,8 @@ module TemplateUtils
   def style_modified(name)
     last_modified_date(name, Tilt[:sass])
   end
+
+  def h(text)
+    Rack::Utils.escape_html(text)
+  end
 end
