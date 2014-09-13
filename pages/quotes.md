@@ -81,6 +81,13 @@ Day[9]
 
 
 
+> "We were worried that we wouldn't be able to get our girlfriend, so we began 
+> to do human trafficking."
+
+<cite>[Mostly Walking - King's Quest VI - P11](https://www.youtube.com/watch?v=toM-lcUnqZQ#t=1421)</cite>
+
+
+
 Mass Effect
 ===========
 
