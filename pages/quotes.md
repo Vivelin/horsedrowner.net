@@ -170,3 +170,26 @@ Star Wars: Knights of the Old Republic
 **Player**: Okay, I see your point. I'll be off, then.
 
 **Calo Nord**: Smart.
+
+
+
+The Witcher 2
+=============
+
+**Triss**: Looks like we're stuck.
+
+**Geralt**: Mhm.
+
+**Triss**: There must be another way out of here.
+
+**Geralt**: Mhm.
+
+**Triss**: Why're you looking at me that way? Do I have something on my face?
+
+**Geralt**: Nuh-uh.
+
+**Triss**: What's going on in that head of yours, witcher?
+
+**Geralt**: Oh, you know, stuff. You could use a bath.
+
+**Triss**: So could you.
