@@ -22,8 +22,6 @@ TotalBiscuit
 >
 > "And our French audience suddenly disappears."
 
-<!-- Markdown sucks. This comment is to prevent the blockquotes from joining -->
-
 > "What can I say, I'm an expert at blowing."
 
 <cite>[The Mailbox with TotalBiscuit #3](http://www.youtube.com/watch?v=wvvwYanzSWg#t=252)</cite>
@@ -151,6 +149,12 @@ Borderlands 2
 > "What?! I said 'AAAAND open', not 'AAAAAND close a secondary set of doors'!"
 
 <cite>Claptrap</cite>
+
+> "WELCOME TO ROBOT PUNCH CITY, POPULATION: EVERYONE'S FACES!"
+
+> "OR, BETTER QUESTION: WHO CARES?!"
+
+<cite>[Borderlands: The Pre-Sequel: An Introduction by Sir Hammerlock AND MISTER TORGUE](https://www.youtube.com/watch?v=tuPXnIBrkgA)</cite>
 
 
 
