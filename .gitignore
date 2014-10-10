@@ -220,3 +220,4 @@ pip-log.txt
 
 .sass-cache
 config/application.yml
+pages/
