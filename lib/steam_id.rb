@@ -66,12 +66,19 @@ class SteamId
   end
 
   ##
+  # Returns a string representing the player's current status
+  #
+  def status_string
+    status.to_s.gsub(/_/, ' ').capitalize
+  end
+
+  ##
   # Returns a message containing the player's name and status.
   #
   def state_message
     case
     when playing? then "#{ nickname } - #{ playing }"
-    when loaded? then "#{ nickname } - #{ status.capitalize }"
+    when loaded? then "#{ nickname } - #{ status_string }"
     else "horsedrowner"
     end
   end

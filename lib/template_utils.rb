@@ -40,4 +40,8 @@ module TemplateUtils
   def h(text)
     Rack::Utils.escape_html(text)
   end
+
+  def format_num(num)
+    num.to_s.gsub(/\d(?=(...)+$)/, '\0,')
+  end
 end
