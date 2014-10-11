@@ -85,7 +85,7 @@ end
 
 get "/:page?" do
   @page = params[:page] || "about"
-  last_modified page_modified(@page)
+  # last_modified page_modified(@page)
 
   begin
     erb :main_layout, :layout => false do
