@@ -7,6 +7,7 @@ require "./lib/template_utils"
 require "./lib/name_utils"
 require "./lib/steam_id"
 require "./lib/lastfm_user"
+require "./lib/twitch_channel"
 require "./lib/home"
 
 helpers TemplateUtils, NameUtils
@@ -26,6 +27,7 @@ configure do
   set :steam_api_key, app_config["steam_api_key"]
   set :lastfm_user, app_config["lastfm_user"]
   set :lastfm_api_key, app_config["lastfm_api_key"]
+  set :twitch_user, app_config["twitch_user"] || "horsedrowner"
   set :twitch_streams, app_config["twitch_streams"]
 end
 
@@ -53,6 +55,13 @@ get "/status/lastfm" do
   user = LastFmUser.new(settings.lastfm_user)
   user.api_key = settings.lastfm_api_key
   JSON.generate(user.fetch)
+end
+
+get "/status/twitch" do
+  headers "Content-Type" => "application/json"
+
+  channel = TwitchChannel.new(settings.twitch_user)
+  JSON.generate(channel.fetch)
 end
 
 get "/home" do

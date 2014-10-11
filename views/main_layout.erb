@@ -1,8 +1,10 @@
 <%
 id = SteamId.new(settings.steamid)
 np = LastFmUser.new(settings.lastfm_user)
+tc = TwitchChannel.new(settings.twitch_user)
 id.parse
 np.parse
+tc.parse
 %>
 <!doctype html>
 <title>horsedrowner.net</title>
@@ -19,7 +21,14 @@ np.parse
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2:300,600">
 
-<p id="nowplaying" class="alert" <%= 'style="display: none"' unless np.playing? %>>
+<p id="twitch-alert" class="live twitch stream alert" <%= 'style="display:none"' unless tc.live? %>>
+    <a href="<%= h tc.link %>">
+        <i class="live icon"></i>
+        <span id="twitch-status"><%= h tc.status %></span> — Live on Twitch playing <span id="twitch-game"><%= h tc.game %></span>
+        <img id="twitch-alert-loading" class="load-indicator" style="display: none" src="/images/loading-purple.gif" alt="...">
+    </a>
+</p>
+<p id="nowplaying" class="alert" <%= 'style="display:none"' unless np.playing? %>>
     <a><img src="/images/lastfm.png" alt="Last.fm"> <span><%= "#{ np.artist } - #{ np.name }" %></span>
     <img id="nowplaying-loading" class="load-indicator" style="display: none" src="/images/loading-red.gif" alt="..."></a>
 </p>
