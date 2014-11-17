@@ -101,7 +101,8 @@ class LastFmUser
             :album => @album,
             :artist => @artist,
             :name => @name,
-            :url => @url
+            :url => @url,
+            :text => to_s
           }
         end
       end
@@ -109,5 +110,12 @@ class LastFmUser
       @playing = false
       { :playing => false }
     end
+  end
+    
+  ##
+  # Returns a string representation of the currently playing song.
+  #
+  def to_s
+    @album.to_s.empty? ? "#{ @artist } – #{ @name }" : "#{ @artist } – #{ @name } (#{ @album })"
   end
 end

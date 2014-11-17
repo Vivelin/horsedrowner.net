@@ -47,7 +47,7 @@ function beginUpdateNowPlaying(interval) {
             $("#nowplaying-loading").hide();
 
             if (track.playing) {
-                $("#nowplaying span").text(track.artist + " - " + track.name);
+                $("#nowplaying span").text(track.text);
                 $("#nowplaying a").attr("href", track.url);
                 $("#nowplaying").show();
             } else {

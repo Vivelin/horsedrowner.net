@@ -29,7 +29,7 @@ tc.parse
     </a>
 </p>
 <p id="nowplaying" class="alert" <%= 'style="display:none"' unless np.playing? %>>
-    <a><img src="/images/lastfm.png" alt="Last.fm"> <span><%= "#{ np.artist } - #{ np.name }" %></span>
+    <a><img src="/images/lastfm.png" alt="Last.fm"> <span><%= "#{ np.to_s }" %></span>
     <img id="nowplaying-loading" class="load-indicator" style="display: none" src="/images/loading-red.gif" alt="..."></a>
 </p>
 <header>
