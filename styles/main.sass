@@ -206,6 +206,9 @@ hr
     a
         color: $alert-text-color // Because apparently, !important isn't enough anymore
         display: block // Turn the entire .alert into a link
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
 
     a:hover
         text-decoration: none
