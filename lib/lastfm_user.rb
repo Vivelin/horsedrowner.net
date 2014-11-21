@@ -116,6 +116,6 @@ class LastFmUser
   # Returns a string representation of the currently playing song.
   #
   def to_s
-    @album.to_s.empty? ? "#{ @artist } – #{ @name }" : "#{ @artist } – #{ @name } (#{ @album })"
+    "#{ @artist } – #{ @name }"
   end
 end
