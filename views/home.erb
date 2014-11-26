@@ -2,7 +2,9 @@
 
 <section>
 <h1> Live on Twitch </h1>
-<% if home.live_streams.empty? %>
+<% if home.live_streams.nil? %>
+    <p>Twitch fucked up.</p>
+<% elsif home.live_streams.empty? %>
 	<p>Nobody is streaming right now.</p>
 <% else %>
 	<% home.live_streams.each do |stream| %>

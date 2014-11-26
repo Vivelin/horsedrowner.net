@@ -12,18 +12,23 @@ class Home
   def live_streams
     return @res["streams"] unless @res.nil?
 
-    uri = URI("https://api.twitch.tv/kraken/streams/")
-    uri.query = URI.encode_www_form(:channel => streams)
+    begin
+      uri = URI("https://api.twitch.tv/kraken/streams/")
+      uri.query = URI.encode_www_form(:channel => streams)
 
-    puts "Requesting #{ uri }..."
-    @res = JSON.parse(Net::HTTP.get(uri))
+      puts "Requesting #{ uri }..."
+      @res = JSON.parse(Net::HTTP.get(uri))
 
-    if @res["error"]
-      puts "Twitch returned #{ @res["status"] } #{ @res["error"] }: #{ @res["message"] }"
+      if @res["error"]
+        puts "Twitch returned #{ @res["status"] } #{ @res["error"] }: #{ @res["message"] }"
+        return nil
+      end
+
+      @res["streams"]
+    rescue
+      puts "Twitch fucked up"
       return nil
     end
-
-    @res["streams"]
   end
 
   private
