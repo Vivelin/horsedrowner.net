@@ -9,11 +9,6 @@ $box-color:                     #eee
 $box-text-color:                #2d2d2d
 $box-inactive-text-color:       #999
 $primary-color:                 dodgerblue
-$alert-color:                   #d81102
-$alert-text-color:              white
-$steam-online-color:            #86b5d9
-$steam-ingame-color:            #8bc53f
-$steam-offline-color:           #898989
 
 // Fonts
 $page-font-family:              "Open Sans", "Segoe UI", sans-serif
@@ -38,52 +33,6 @@ body
     color: $page-text-color
     margin: 0
 
-header
-    background-color: $header-color
-    color: $header-text-color
-    height: $header-height
-
-    .avatar
-        height: $header-height
-        float: left
-        margin: 0 1em 0 0
-
-    .avatar.online, .avatar.away, .avatar.busy, .avatar.looking_to_trade, .avatar.looking_to_play
-        border-left: 8px solid $steam-online-color
-
-    .avatar.ingame
-        border-left: 8px solid $steam-ingame-color
-
-    .title
-        color: $steam-offline-color
-        display: inline-block
-        font-family: $small-caption-font-family
-        font-weight: $small-caption-font-weight
-        font-size: 1em
-        text-transform: uppercase
-        margin: 1em 0 0 0
-
-    nav
-        ul
-            margin: 0
-            list-style: none
-            padding-left: 0
-
-        li
-            float: left
-            margin: 0 1em 0 0
-
-        a
-            color: $header-inactive-text-color
-            font-family: $caption-font-family
-            font-weight: $caption-font-weight
-            font-size: 2em
-
-        a:hover
-            text-decoration: none
-
-        a.active
-            color: $header-text-color
 
 main
     display: block // :|
@@ -102,7 +51,9 @@ a
     text-decoration: none
 
 a:hover
-    text-decoration: underline
+    color: complement($primary-color)
+    text-shadow: 0 0 2px rgba(complement($primary-color), .33)
+    text-decoration: none
 
 code
     background-color: $box-color
@@ -185,47 +136,10 @@ hr
     border-top: 2px solid $page-inactive-text-color
     margin: 2em 0
 
-// Misc. classes
-.online, .away, .busy, .looking_to_trade, .looking_to_play
-    color: $steam-online-color !important
-
-.ingame
-    color: $steam-ingame-color !important
-
-.offline
-    color: $steam-offline-color !important
-
-.alert
-    background-color: $alert-color
-    color: $alert-text-color
-    font-family: $small-caption-font-family
-    font-weight: $small-caption-font-weight
-    margin: 0
-    padding: .2em .5em
-
-    a
-        color: $alert-text-color // Because apparently, !important isn't enough anymore
-        display: block // Turn the entire .alert into a link
-        overflow: hidden
-        text-overflow: ellipsis
-        white-space: nowrap
-
-    a:hover
-        text-decoration: none
-
-    img
-        height: 1.5ex
-
-.twitch.stream.alert
-    padding: .2em .5em
-    margin: 0
-
-.load-indicator
-    height: 16px !important
-    vertical-align: -2px
 
 .hidden
     display: none
 
+@import header
 @import home
 @import mobile

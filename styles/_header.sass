@@ -1,0 +1,96 @@
+$alert-color:                   #d81102
+$alert-text-color:              white
+$steam-online-color:            #86b5d9
+$steam-ingame-color:            #8bc53f
+$steam-offline-color:           #898989
+
+header
+    background-color: $header-color
+    color: $header-text-color
+    height: $header-height
+
+    .avatar
+        height: $header-height
+        float: left
+        margin: 0 1em 0 0
+
+    .avatar.online, .avatar.away, .avatar.busy, .avatar.looking_to_trade, .avatar.looking_to_play
+        border-left: 8px solid $steam-online-color
+
+    .avatar.ingame
+        border-left: 8px solid $steam-ingame-color
+
+    .title
+        color: $steam-offline-color
+        display: inline-block
+        font-family: $small-caption-font-family
+        font-weight: $small-caption-font-weight
+        font-size: 1em
+        text-transform: uppercase
+        margin: 1em 0 0 0
+
+    nav
+        ul
+            margin: 0
+            list-style: none
+            padding-left: 0
+
+        li
+            float: left
+            margin: 0 1em 0 0
+
+        a
+            color: $header-inactive-text-color
+            font-family: $caption-font-family
+            font-weight: $caption-font-weight
+            font-size: 2em
+
+        a:hover
+            color: lighten($header-inactive-text-color, 10%)
+            text-shadow: none
+            text-decoration: none
+
+        a.active
+            color: $header-text-color
+            
+
+.online, .away, .busy, .looking_to_trade, .looking_to_play
+    color: $steam-online-color !important
+    border-color: $steam-online-color 
+
+.ingame
+    color: $steam-ingame-color !important
+    border-color: $steam-ingame-color
+
+.offline
+    color: $steam-offline-color !important
+    border-color: $steam-offline-color
+
+.alert
+    background-color: $alert-color
+    color: $alert-text-color
+    font-family: $small-caption-font-family
+    font-weight: $small-caption-font-weight
+    line-height: 1.4
+    margin: 0
+    padding: .2em .5em
+
+    a
+        color: $alert-text-color // Because apparently, !important isn't enough anymore
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+    a:hover
+        text-decoration: none
+
+    img
+        height: 1.5ex
+
+.twitch.stream.alert
+    padding: .2em .5em
+    margin: 0
+
+.load-indicator
+    height: 16px !important
+    vertical-align: -2px
