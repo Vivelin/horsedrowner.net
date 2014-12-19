@@ -2,24 +2,32 @@ $twitch-color: 		#6441A5
 $twitch-text-color: #FFF
 
 .twitch.stream
-	background-color: $twitch-color
-	color: $twitch-text-color
-	margin-bottom: 1em
-	padding: .5em 1em
+    background-color: $twitch-color
+    color: $twitch-text-color
+    margin-bottom: 1em
+    padding: .5em 1em
 
-	a
-		color: $twitch-text-color
+    a
+        color: $twitch-text-color
 
-	.viewers
-		background-color: rgba(0, 0, 0, 0.5)
-		display: inline-block
-		font-size: .8em
-		margin-left: .5em
-		padding: .25em .5em
-		float: right
+    .viewers
+        background-color: rgba(0, 0, 0, 0.5)
+        display: inline-block
+        font-size: .8em
+        margin-left: .5em
+        padding: .25em .5em
+        float: right
 
-i.live.icon:before
-	color: #F00
-	content: "\2B24"
-	font-style: normal !important
-	margin-right: .25em
+.live.icon:before
+    color: #F00
+    content: "\25CF" // BLACK CIRCLE (U+25CF) because BLACK LARGE CIRCLE is apparently not supported in Chrome
+    font-style: normal !important
+    margin-right: .25em
+
+.large.icon:before
+    font-size: 2em
+    // Fuck CSS
+    line-height: 0 // Ignore the increased line-height from the increased font-size
+    vertical-align: sub // Offset the weird alignment from the increased font-size
+    margin-left: -.15em // You know the drill by now
+    margin-right: .15em

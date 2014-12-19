@@ -9,7 +9,7 @@
 <% else %>
 	<% home.live_streams.each do |stream| %>
 	<div class="live twitch stream">
-		<i class="live icon" title="Live"></i> 
+		<i class="large live icon" title="Live"></i> 
 		<a href="<%= stream["channel"]["url"] %>" 
 		   title="Playing <%= h stream["game"] %>">
 			<strong><%= h stream["channel"]["display_name"] %></strong>: 
