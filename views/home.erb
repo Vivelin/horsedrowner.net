@@ -10,10 +10,10 @@
 	<% home.live_streams.each do |stream| %>
 	<div class="live twitch stream">
 		<i class="large live icon" title="Live"></i> 
-		<a href="<%= stream["channel"]["url"] %>" 
-		   title="Playing <%= h stream["game"] %>">
+		<a href="http://www.twitch.tv/<%= h stream['channel']['name'] %>" 
+		   title="Playing <%= h stream['game'] %>">
 			<strong><%= h stream["channel"]["display_name"] %></strong>: 
-			<%= h stream["channel"]["status"] %>
+			<%= h(stream["channel"]["status"] || stream['game']) %>
 		</a>
 		<span class="viewers" title="Watching now">
 			<%= h format_num(stream["viewers"]) %>
