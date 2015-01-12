@@ -6,9 +6,18 @@ $twitch-text-color: #FFF
     color: $twitch-text-color
     margin-bottom: 1em
     padding: .5em 1em
+    white-space: nowrap // Don't wrap long titles to a new line
+    overflow: hidden // Prevent the element from collapsing???
+        
+    .live.icon
+        float: left // Necessary because <a> also has float
 
     a
         color: $twitch-text-color
+        float: left // Necessary to give an inline element a width
+        overflow: hidden // Hide overflow on ridiculously long titles...
+        text-overflow: ellipsis // ...with ellipsis
+        width: $content-width - 120px // Leave room for the viewer count
         
     a:hover
         text-shadow: none
