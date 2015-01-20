@@ -1,27 +1,27 @@
 <% @page = "home" %>
 
 <section>
-<h1> Live on Twitch </h1>
+    <h1> Live on Twitch </h1>
 <% if home.live_streams.nil? %>
     <p>Twitch fucked up.</p>
 <% elsif home.live_streams.empty? %>
-	<p>Nobody is streaming right now.</p>
+    <p>Nobody is streaming right now.</p>
 <% else %>
-	<% home.live_streams.each do |stream| %>
-	<div class="live twitch stream">
-		<i class="large live icon" title="Live"></i> 
-		<a href="http://www.twitch.tv/<%= h stream['channel']['name'] %>" 
-		   title="<%= h stream['channel']['status'] %>"> 
+<% home.live_streams.each do |stream| %>
+    <div class="live twitch stream">
+        <i class="large live icon" title="Live"></i> 
+        <a href="http://www.twitch.tv/<%= h stream['channel']['name'] %>" 
+           title="<%= h stream['channel']['status'] %>"> 
             <strong><%= h stream["channel"]["display_name"] %></strong>
             playing <strong><%= h stream['game'] %></strong>
         <% if stream["channel"]["status"] %>
             <em><%= h stream["channel"]["status"] %></em>
         <% end %>
-		</a>
-		<span class="viewers" title="Watching now">
-			<%= h format_num(stream["viewers"]) %>
-		</span>
-	</div>
-	<% end %>
+        </a>
+        <span class="viewers" title="Watching now">
+            <%= h format_num(stream["viewers"]) %>
+        </span>
+    </div>
+<% end %>
 <% end %>
 </section>
