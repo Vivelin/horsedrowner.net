@@ -11,9 +11,12 @@
 	<div class="live twitch stream">
 		<i class="large live icon" title="Live"></i> 
 		<a href="http://www.twitch.tv/<%= h stream['channel']['name'] %>" 
-		   title="Playing <%= h stream['game'] %>">
-			<strong><%= h stream["channel"]["display_name"] %></strong>: 
-			<%= h(stream["channel"]["status"] || stream['game']) %>
+		   title="<%= h stream['channel']['status'] %>"> 
+            <strong><%= h stream["channel"]["display_name"] %></strong>
+            playing <strong><%= h stream['game'] %></strong>
+        <% if stream["channel"]["status"] %>
+            <em><%= h stream["channel"]["status"] %></em>
+        <% end %>
 		</a>
 		<span class="viewers" title="Watching now">
 			<%= h format_num(stream["viewers"]) %>
