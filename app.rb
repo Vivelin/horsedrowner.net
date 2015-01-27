@@ -8,7 +8,6 @@ require "./lib/name_utils"
 require "./lib/steam_id"
 require "./lib/lastfm_user"
 require "./lib/twitch_channel"
-require "./lib/home"
 
 helpers TemplateUtils, NameUtils
 
@@ -65,9 +64,7 @@ get "/status/twitch" do
 end
 
 get "/home" do
-  home = Home.new
-  home.twitch_streams = settings.twitch_streams
-  erb :home, :layout => :main_layout, :locals => { :home => home }
+  erb :home, :layout => :main_layout
 end
 
 get "/ip" do
