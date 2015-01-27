@@ -70,11 +70,11 @@ function beginUpdateTwitch(interval) {
     interval = interval || 60000;
     
     function update() {
-        $("twitch-alert-loading").show();
+        $("#twitch-alert-loading").show();
 
         $.getJSON("/status/twitch", function (stream) {
             console.log(stream);
-            $("twitch-alert-loading").hide();
+            $("#twitch-alert-loading").hide();
 
             if (stream.live) {
                 $("#twitch-status").text(stream.status);
