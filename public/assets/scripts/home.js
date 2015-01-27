@@ -23,48 +23,52 @@ function beginUpdateStreams(channels, interval) {
             var $twitch = $("#twitch");
             $twitch.empty();
             
-            $.each(data.streams, function (index, stream) {
-                var isFucked = !stream.channel.hasOwnProperty("status"),
-                    url = stream.channel.url
-                        || "http://www.twitch.tv/" + stream.channel.name,
-                    $div = $("<div>", { "class": "live twitch stream" }),
-                    $icon = $("<i>", {
-                        "class": "large live icon",
-                        "title": "Live"
-                    }),
-                    $status = $("<a>", {
-                        "href": url,
-                        "title": stream.channel.status
-                    }),
-                    $name = $("<strong>", {
-                        "text": stream.channel.display_name
-                    }),
-                    $game = $("<strong>", {
-                        "text": stream.game
-                    }),
-                    $title = $("<em>", {
-                        "text": stream.channel.status
-                    }),
-                    $viewers = $("<span>", {
-                        "class": "viewers",
-                        "title": "Watching now",
-                        "text": parseInt(stream.viewers, 10).toLocaleString()
-                    });
-                
-                $status.append($name);
-                $status.append(" playing ");
-                $status.append($game);
-                if (!isFucked) {
-                    $status.append(": ");
-                    $status.append($title);
-                }
-                
-                $icon.appendTo($div);
-                $status.appendTo($div);
-                $viewers.appendTo($div);
-                
-                $div.appendTo($twitch);
-            });
+            if (data.streams && data.streams.length > 0) {
+                $.each(data.streams, function (index, stream) {
+                    var isFucked = !stream.channel.hasOwnProperty("status"),
+                        url = stream.channel.url
+                            || "http://www.twitch.tv/" + stream.channel.name,
+                        $div = $("<div>", { "class": "live twitch stream" }),
+                        $icon = $("<i>", {
+                            "class": "large live icon",
+                            "title": "Live"
+                        }),
+                        $status = $("<a>", {
+                            "href": url,
+                            "title": stream.channel.status
+                        }),
+                        $name = $("<strong>", {
+                            "text": stream.channel.display_name
+                        }),
+                        $game = $("<strong>", {
+                            "text": stream.game
+                        }),
+                        $title = $("<em>", {
+                            "text": stream.channel.status
+                        }),
+                        $viewers = $("<span>", {
+                            "class": "viewers",
+                            "title": "Watching now",
+                            "text": parseInt(stream.viewers, 10).toLocaleString()
+                        });
+
+                    $status.append($name);
+                    $status.append(" playing ");
+                    $status.append($game);
+                    if (!isFucked) {
+                        $status.append(": ");
+                        $status.append($title);
+                    }
+
+                    $icon.appendTo($div);
+                    $status.appendTo($div);
+                    $viewers.appendTo($div);
+
+                    $div.appendTo($twitch);
+                });
+            } else {
+                $twitch.append("Nobody is streaming right now.");
+            }
         });
     }
     
