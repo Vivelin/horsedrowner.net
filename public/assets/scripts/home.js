@@ -30,7 +30,7 @@ function beginUpdateStreams(channels, interval) {
                             || "http://www.twitch.tv/" + stream.channel.name,
                         $div = $("<div>", { "class": "live twitch stream" }),
                         $icon = $("<i>", {
-                            "class": "large live icon",
+                            "class": "red circle icon",
                             "title": "Live"
                         }),
                         $status = $("<a>", {

@@ -9,15 +9,20 @@ $twitch-text-color: #FFF
     white-space: nowrap // Don't wrap long titles to a new line
     overflow: hidden // Prevent the element from collapsing???
         
-    .live.icon
-        float: left // Necessary because <a> also has float
+    .icon
+        float: left // Necessary because <a> also has float 
+        line-height: 1.55em
+        margin-left: -.15em
+        
+    .red.icon 
+        color: #f00!important
 
     a
         color: $twitch-text-color
         float: left // Necessary to give an inline element a width
         overflow: hidden // Hide overflow on ridiculously long titles...
         text-overflow: ellipsis // ...with ellipsis
-        width: $content-width - 120px // Leave room for the viewer count
+        width: $content-width - 125px // Leave room for the viewer count
         
     a:hover
         text-shadow: none
@@ -29,17 +34,3 @@ $twitch-text-color: #FFF
         margin-left: .5em
         padding: .25em .5em
         float: right
-
-.live.icon:before
-    color: #F00
-    content: "\25CF" // BLACK CIRCLE (U+25CF) because BLACK LARGE CIRCLE is apparently not supported in Chrome
-    font-style: normal !important
-    margin-right: .25em
-
-.large.icon:before
-    font-size: 2em
-    // Fuck CSS
-    line-height: 0 // Ignore the increased line-height from the increased font-size
-    vertical-align: sub // Offset the weird alignment from the increased font-size
-    margin-left: -.15em // You know the drill by now
-    margin-right: .15em

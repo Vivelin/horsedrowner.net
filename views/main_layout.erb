@@ -18,24 +18,25 @@ tc.parse
 <meta name="msapplication-TileImage" content="curly-144px.png">
 <meta name="msapplication-TileColor" content="#254A88">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/icon.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Exo+2:300,600">
 
 <p id="twitch-alert" class="live twitch stream alert" <%= 'style="display:none"' unless tc.live? %>>
     <a href="<%= h tc.link %>">
-        <i class="live icon"></i>
+        <i class="red circle icon"></i>
         <span id="twitch-status"><%= h tc.status %></span> — Live on Twitch playing <span id="twitch-game"><%= h tc.game %></span>
-        <img id="twitch-alert-loading" class="load-indicator" style="display: none" src="/images/loading-purple.gif" alt="...">
+        <i id="twitch-alert-loading" class="refresh loading icon" style="display: none"></i>
     </a>
 </p>
 <p id="nowplaying" class="alert" <%= 'style="display:none"' unless np.playing? %>>
     <a><img src="/images/lastfm.png" alt="Last.fm"> <span><%= "#{ np.to_s }" %></span>
-    <img id="nowplaying-loading" class="load-indicator" style="display: none" src="/images/loading-red.gif" alt="..."></a>
+    <i id="nowplaying-loading" class="refresh loading icon" style="display: none"></i></a>
 </p>
 <header>
     <img id="avatar" class="avatar <%= id.status %>" src="<%= settings.avatar %>" alt="">
     <span id="display-name" class="title <%= id.status %>"><%= id.state_message %></span>
-    <img id="display-name-loading" class="load-indicator" style="display: none" src="/images/loading.gif" alt="...">
+    <i id="display-name-loading" class="refresh loading icon" style="display: none"></i>
     <nav>
         <ul>
             <% settings.pages.each do |p| %>
