@@ -29,13 +29,13 @@ function beginUpdateStreams(channels, interval) {
                         url = stream.channel.url
                             || "http://www.twitch.tv/" + stream.channel.name,
                         $div = $("<div>", { "class": "live twitch stream" }),
-                        $icon = $("<i>", {
-                            "class": "red circle icon",
-                            "title": "Live"
-                        }),
                         $status = $("<a>", {
                             "href": url,
                             "title": stream.channel.status
+                        }),
+                        $icon = $("<i>", {
+                            "class": "red circle icon",
+                            "title": "Live"
                         }),
                         $name = $("<strong>", {
                             "text": stream.channel.display_name
@@ -52,6 +52,7 @@ function beginUpdateStreams(channels, interval) {
                             "text": parseInt(stream.viewers, 10).toLocaleString()
                         });
 
+                    $status.append($icon);
                     $status.append($name);
                     $status.append(" playing ");
                     $status.append($game);
@@ -60,7 +61,6 @@ function beginUpdateStreams(channels, interval) {
                         $status.append($title);
                     }
 
-                    $icon.appendTo($div);
                     $status.appendTo($div);
                     $viewers.appendTo($div);
 

@@ -1,36 +1,41 @@
 $twitch-color: 		#6441A5
 $twitch-text-color: #FFF
+$twitch-viewers-color: rgba(0, 0, 0, 0.5)
 
 .twitch.stream
     background-color: $twitch-color
     color: $twitch-text-color
     margin-bottom: 1em
     padding: .5em 1em
-    white-space: nowrap // Don't wrap long titles to a new line
-    overflow: hidden // Prevent the element from collapsing???
+    display: inline-block
+    width: 95%
+    position: relative
         
     .icon
-        float: left // Necessary because <a> also has float 
         line-height: 1.55em
         margin-left: -.15em
         
     .red.icon 
         color: #f00!important
 
-    a
+    a        
         color: $twitch-text-color
-        float: left // Necessary to give an inline element a width
-        overflow: hidden // Hide overflow on ridiculously long titles...
-        text-overflow: ellipsis // ...with ellipsis
-        width: $content-width - 125px // Leave room for the viewer count
+        padding-right: 4em
+        box-sizing: border-box
+        width: 100%
+        display: inline-block
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+        word-break: break-all
+        word-wrap: break-word
         
     a:hover
         text-shadow: none
 
     .viewers
-        background-color: rgba(0, 0, 0, 0.5)
-        display: inline-block
+        position: absolute
+        right: 1em
+        background-color: $twitch-viewers-color
         font-size: .8em
-        margin-left: .5em
         padding: .25em .5em
-        float: right
