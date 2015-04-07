@@ -1,15 +1,30 @@
-/*global $, console, followedChannels*/
-
+/* global followedChannels */
 (function () {
     'use strict';
     
-    var minutes = 60 * 1000;
+    var minutes = 60 * 1000,
+        strings = {
+        "live": "Live now!",
+        "viewers": "Watching now",
+        "new": "Just started streaming!",
+        "recent": "Recently started streaming!",
+        "playing": "streaming",
+        "nonelive": "Nobody is streaming right now."
+    };
     
     /**
      * Renders a Twitch API stream object as an HTML element.
      * @param {Object} stream A Twitch API stream object.
      */
-    function renderStream(stream) {
+    function renderStream(stream, opt) {
+        var defaults = {
+            flavors: {
+                "yellow asterisk icon": (15 * minutes),
+                "asterisk icon": (30 * minutes)
+            }
+        };
+        $.extend(opt, defaults);
+
         var isFucked = !stream.channel.hasOwnProperty("status"),
             url = stream.channel.url
                 || "http://www.twitch.tv/" + stream.channel.name,
@@ -22,7 +37,7 @@
             }),
             $icon = $("<i>", {
                 "class": "twitch icon",
-                "title": "Live now!"
+                "title": strings.live
             }),
             $name = $("<strong>", {
                 "text": stream.channel.display_name
@@ -35,7 +50,7 @@
             }),
             $viewers = $("<span>", {
                 "class": "viewers",
-                "title": "Watching now",
+                "title": strings.viewers,
                 "text": parseInt(stream.viewers, 10).toLocaleString()
             });
         
@@ -43,18 +58,18 @@
         if (timeLive < (15 * minutes)) {
             $icon = $("<i>", {
                 "class": "yellow asterisk icon",
-                "title": "Just started streaming!"
+                "title": strings.new
             });
         } else if (timeLive < (30 * minutes)) {
             $icon = $("<i>", {
                 "class": "asterisk icon",
-                "title": "Recently started streaming!"
+                "title": strings.recent
             });
         }
 
         $status.append($icon);
         $status.append($name);
-        $status.append(" playing ");
+        $status.append(" " + strings.playing + " ");
         $status.append($game);
         if (!isFucked) {
             $status.append(": ");
@@ -77,7 +92,7 @@
      * @returns {Number} A numerical id which can be used later with 
      *          `clearInterval`.
      */
-    function beginUpdateStreams(channels, interval) {
+    function beginUpdateStreams(channels, interval, opt) {
         interval = interval || 60000;
 
         function update() {
@@ -88,24 +103,23 @@
             $("#home-twitch-updating").show();
             $.getJSON(url, function (data) {
                 $("#home-twitch-updating").hide();
-                console.log(data);
 
                 var $twitch = $("#twitch");
                 $twitch.empty();
 
                 if (data.streams && data.streams.length > 0) {
                     $.each(data.streams, function (index, stream) {
-                        var $stream = renderStream(stream);
+                        var $stream = renderStream(stream, opt);
                         $twitch.append($stream);
                     });
                 } else {
-                    $twitch.append("Nobody is streaming right now.");
+                    $twitch.append(strings.nonelive);
                 }
             });
         }
 
         update();
-        return setInterval(update, interval);
+        return window.setInterval(update, interval);
     }
 
     beginUpdateStreams(followedChannels);

@@ -1,3 +1,5 @@
-/*global $ */
-
-$("#hersir-name").load("/name");
+(function () {
+    'use strict';
+    
+    $("#hersir-name").load("/name");
+}());
