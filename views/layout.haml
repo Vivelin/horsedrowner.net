@@ -1,0 +1,15 @@
+!!!
+%meta{ charset: 'utf-8' }
+%link{ rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Open+Sans:300,600' }
+%link{ rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Merriweather:400,700' }
+%link{ rel: 'stylesheet', type: 'text/css', href: '/style.css' }
+%title= 'horsedrowner.net'
+
+%header
+  != haml :header
+
+%main
+  != yield
+
+%footer
+  != haml :footer
