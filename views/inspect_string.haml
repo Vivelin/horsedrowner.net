@@ -1,0 +1,20 @@
+#input
+  %form{ method: :get }
+    %label{ for: :q }= 'Enter a string to inspect:'
+    %input{ type: :text, name: :q, value: params[:q] }
+
+- unless q.nil?
+  #output
+    %h1= 'Details'
+    %table.characters
+      %thead
+        %tr
+          %th= 'Chr.'
+          %th= 'Code'
+          %th= 'Name'
+      - q.inspect_string.each do |c|
+        %tr
+          %td.char~ c[:char]
+          %td.ord
+            %code= "U+#{ c[:ord].to_s(16).rjust(4, '0') }"
+          %td.sid= c[:sid]

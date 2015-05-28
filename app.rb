@@ -5,6 +5,8 @@ require 'tilt/sass'
 require 'tilt/kramdown'
 require 'yaml'
 
+require './app/strtools.rb'
+
 class App < Sinatra::Base
     configure :development do
       use BetterErrors::Middleware
@@ -19,6 +21,7 @@ class App < Sinatra::Base
 
       set :hersir_names, YAML.load_file('data/hersir.yml')
       set :avatar, '/images/avatars/curly.jpg'
+      set :avatar_style, %w[large inline avatar]
     end
 
     not_found do
@@ -36,6 +39,12 @@ class App < Sinatra::Base
       surname_first = settings.hersir_names['surnames_first'].sample
       surname_second = settings.hersir_names['surnames_second'].sample
       "#{ first_name } #{ surname_first }#{ surname_second }"
+    end
+
+    get '/strtools' do
+      q = StrTools.new(params[:q])
+
+      haml :inspect_string, locals: { q: q }
     end
 
     get '/:page?' do

@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'haml'
 gem 'kramdown'
 gem 'sass'
+gem 'unicode_utils'
 
 group :development do
     gem 'better_errors'
