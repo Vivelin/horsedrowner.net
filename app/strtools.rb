@@ -7,8 +7,12 @@ class StrTools
 
   def inspect_string
     return %w[] if @str.nil?
-    UnicodeUtils.each_grapheme(@str).map do |g|
-      { char: g, ord: g.ord, sid: UnicodeUtils.sid(g) }
+    @str.each_char.map do |g|
+      begin
+        { char: g, ord: g.ord, sid: UnicodeUtils.sid(g) }
+      rescue
+        { char: g, ord: g.ord, sid: UnicodeUtils.char_name(g) }
+      end
     end
   end
 
