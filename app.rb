@@ -5,8 +5,6 @@ require 'tilt/sass'
 require 'tilt/kramdown'
 require 'yaml'
 
-require './app/strtools.rb'
-
 class App < Sinatra::Base
     configure :development do
       use BetterErrors::Middleware
@@ -42,6 +40,10 @@ class App < Sinatra::Base
     end
 
     get '/strtools' do
+      # require 'unicode_tools' on Windows literally takes minutes, so do this
+      # as late as possible
+      require './app/strtools.rb'
+
       q = StrTools.new(params[:q])
 
       haml :inspect_string, locals: { q: q }

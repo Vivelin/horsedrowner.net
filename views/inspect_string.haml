@@ -1,7 +1,7 @@
 #input
   %form{ method: :get }
     %label{ for: :q }= 'Enter a string to inspect:'
-    %input{ type: :text, name: :q, value: params[:q] }
+    %input{ type: :text, name: :q, value: params[:q], required: true }
 
 - unless q.nil?
   #output

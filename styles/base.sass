@@ -1,4 +1,4 @@
-$link-color: dodgerblue
+$accent: hsl(15, 88, 50)
 
 html
     background: hsl(0, 0%, 95%)
@@ -8,24 +8,29 @@ body
     margin: 1rem
 main
     display: block // Internet Explorer
+    margin-top: 2.5rem
     max-width: 960px
 footer
     font-size: 1rem
     margin-top: 2.5rem
     opacity: .75
 
-h1, h2, h3, h4, h5, h6
+h1
     font: 300 2.5rem/1.4 'Open Sans', 'Segoe UI', sans-serif
 h2
-    font-size: 2rem
+    font: 300 2rem/1.4 'Open Sans', 'Segoe UI', sans-serif
+    text-transform: uppercase
 h3
-    font-size: 1.6rem
+    font: 300 2rem/1.4 'Open Sans', 'Segoe UI', sans-serif
+h4
+    font: 600 1.0rem/1.4 'Open Sans', 'Segoe UI', sans-serif
 
 a
-    color: $link-color
+    color: $accent
     text-decoration: none
-a:hover
-    color: complement($link-color)
+a:hover, a:focus
+    text-decoration: underline
+    color: adjust-hue($accent, -30)
 
 code
     background: white
@@ -38,6 +43,8 @@ input
     font: 300 1.2rem/1.4 'Open Sans', 'Segoe UI Emoji', 'Segoe UI', sans-serif
     padding: .2em .5em
     width: 100%
+input[type='text']:focus
+    outline: $accent auto 3px
 
 iframe
     border: none
