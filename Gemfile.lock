@@ -36,3 +36,6 @@ DEPENDENCIES
   sass
   sinatra
   unicode_utils
+
+BUNDLED WITH
+   1.10.6
