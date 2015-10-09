@@ -18,7 +18,7 @@ class App < Sinatra::Base
                      layout_engine: :haml, smartypants: true
 
       set :hersir_names, YAML.load_file('data/hersir.yml')
-      set :avatar, '/images/avatars/curly.jpg'
+      set :avatar, '/images/avatars/MIDNA 5.png'
       set :avatar_style, %w[large inline avatar]
     end
 
