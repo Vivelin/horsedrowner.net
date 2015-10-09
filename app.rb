@@ -12,14 +12,19 @@ class App < Sinatra::Base
     end
 
     configure do
-      set :haml, escape_html: true
+      set :haml, escape_html: true, ugly: true
       set :sass, views: 'styles'
       set :markdown, views: 'pages', layout_options: { views: 'views' },
                      layout_engine: :haml, smartypants: true
 
       set :hersir_names, YAML.load_file('data/hersir.yml')
-      set :avatar, '/images/avatars/MIDNA 5.png'
-      set :avatar_style, %w[large inline avatar]
+      set :avatar, {
+          thumb: '/images/avatars/MIDNA 5.png',
+          thumb_style: %w[large inline avatar],
+          full: '/images/avatars/MIDNA 1.png',
+          full_style: %w[full avatar],
+          source: 'http://cubesona.deviantart.com/art/COMMISSION-Midna-565090804'
+        }
     end
 
     not_found do
@@ -28,6 +33,19 @@ class App < Sinatra::Base
 
     get '/style.css' do
       sass :main
+    end
+
+    get '/avatar' do
+      request.accept.each do |type|
+        case type.to_s
+        when /^image\//
+          halt send_file settings.avatar.full
+        when 'text/html'
+          halt haml :avatar
+        end
+      end
+
+      haml :avatar 
     end
 
     get '/name' do

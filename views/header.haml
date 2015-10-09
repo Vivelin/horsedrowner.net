@@ -1,5 +1,6 @@
 %h1
-  %img{ src: settings.avatar, class: settings.avatar_style }
+  %a{ href: '/avatar' }
+    %img{ src: settings.avatar[:thumb], class: settings.avatar[:thumb_style], alt: '' }
   %a{ href: '/' }= 'horsedrowner'
 
 %nav
