@@ -12,7 +12,7 @@ class App < Sinatra::Base
     end
 
     configure do
-      set :haml, escape_html: true, ugly: true
+      set :haml, escape_html: true, ugly: true, remove_whitespace: true
       set :sass, views: 'styles'
       set :markdown, views: 'pages', layout_options: { views: 'views' },
                      layout_engine: :haml, smartypants: true
