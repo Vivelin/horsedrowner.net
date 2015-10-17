@@ -16,14 +16,17 @@ footer
     opacity: .5
 
 h1
-    font: 300 2.5rem/1.4 'Open Sans', 'Segoe UI', sans-serif
+    font: 600 2.5rem/1.6 'Open Sans', 'Segoe UI', sans-serif
 h2
-    font: 300 2rem/1.4 'Open Sans', 'Segoe UI', sans-serif
-    text-transform: uppercase
+    font: 700 2rem/1.4 'Open Sans', 'Segoe UI', sans-serif
+    border-bottom: 1px solid hsl(0, 0%, 5%)
 h3
-    font: 300 2rem/1.4 'Open Sans', 'Segoe UI', sans-serif
+    font: 300 1.6rem/1.4 'Open Sans', 'Segoe UI', sans-serif
 h4
-    font: 600 1.0rem/1.4 'Open Sans', 'Segoe UI', sans-serif
+    font: 700 1rem/1.4 'Open Sans', 'Segoe UI', sans-serif
+    margin-top: 2.5rem
+    margin-bottom: -.5rem
+    text-transform: uppercase
 
 a
     color: $accent
@@ -32,15 +35,26 @@ a:hover, a:focus
     text-decoration: underline
     color: adjust-hue($accent, -30)
 
+b
+    /* The b element represents a span of text to which attention is being 
+     * drawn for utilitarian purposes without conveying any extra importance 
+     * and with no implication of an alternate voice or mood, such as key words 
+     * in a document abstract, product names in a review, actionable words in 
+     * interactive text-driven software, or an article lede.
+     */
+    font-weight: inherit
+    font-variant: small-caps
+
 code
     background: white
     border-radius: .2em
     color: hsl(0, 66.6%, 42.0%)
+    font: 400 1.2rem/1.2 'Fira Mono', 'Input', Consolas, monospace
     padding: .1em .25em
     white-space: pre
 
 input
-    font: 300 1.2rem/1.4 'Open Sans', 'Segoe UI Emoji', 'Segoe UI', sans-serif
+    font: 400 1.2rem/1.4 'Open Sans', 'Segoe UI Emoji', 'Segoe UI', sans-serif
     padding: .2em .5em
     width: 100%
 input[type='text']:focus
