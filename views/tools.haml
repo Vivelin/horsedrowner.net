@@ -1,9 +1,9 @@
 #input
   %form{ method: :get }
-    %label{ for: :q }= 'Enter a string to inspect:'
-    %input{ type: :text, name: :q, value: params[:q], required: true }
+    %label{ for: :string }= 'Inspect a string:'
+    %input{ type: :text, name: :string, value: params[:string], required: true }
 
-- unless q.nil?
+- unless strtools.nil?
   #output
     %h1= 'Details'
     %table.characters
@@ -12,7 +12,7 @@
           %th= 'Chr.'
           %th= 'Code'
           %th= 'Name'
-      - q.inspect_string.each do |c|
+      - strtools.inspect_string.each do |c|
         %tr
           %td.char~ c[:char]
           %td.ord

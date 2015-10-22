@@ -57,14 +57,14 @@ class App < Sinatra::Base
       "#{ first_name } #{ surname_first }#{ surname_second }"
     end
 
-    get '/strtools' do
+    get '/tools' do
       # require 'unicode_tools' on Windows literally takes minutes, so do this
       # as late as possible
       require './app/strtools.rb'
 
-      q = StrTools.new(params[:q])
+      strtools = StrTools.new(params[:string])
 
-      haml :inspect_string, locals: { q: q }
+      haml :tools, locals: { strtools: strtools }
     end
 
     get '/:page?' do
