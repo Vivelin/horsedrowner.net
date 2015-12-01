@@ -1,7 +1,6 @@
-#input
-  %form{ method: :get }
-    %label{ for: :string }= 'Inspect a string:'
-    %input{ type: :text, name: :string, value: params[:string], required: true }
+%form#input{ method: :get }
+  %label{ for: :string }= 'Inspect a string:'
+  %input{ type: :text, name: :string, value: params[:string], required: true }
 
 - unless strtools.nil?
   #output
