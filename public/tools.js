@@ -1,9 +1,11 @@
 (function () {
     function createSubmitEventHandler(form) {
         return function(e) {
-            if (form && e.target.value) {
+            if (form) {
                 window.setTimeout(function () {
-                    form.submit();
+                    if (e.target.value) {
+                        form.submit();
+                    }
                 }, 1);
             }
         };
