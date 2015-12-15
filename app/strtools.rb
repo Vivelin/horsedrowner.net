@@ -7,7 +7,7 @@ class StrTools
 
   def inspect_string
     return %w[] if @str.nil?
-    @str.each_char.map do |g|
+    @str.each_char.reject{ |c| c.match(/[^A-Za-z0-9]/).nil? }.map do |g|
       begin
         { char: g, ord: g.ord, sid: UnicodeUtils.sid(g) }
       rescue

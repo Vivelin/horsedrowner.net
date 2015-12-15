@@ -1,6 +1,9 @@
 %form#input{ method: :get }
-  %label{ for: :string }= 'Inspect a string:'
-  %input{ type: :text, name: :string, value: params[:string], required: true }
+  %label{ for: :string }!= 'Inspect a string:&#x20;'
+  %small= '(Regular letters and digits are ignored)'
+
+  /%input{ type: :text, name: :string, value: params[:string], required: true }
+  %textarea.single{ name: :string, rows: 1, required: true }= params[:string]
 
 - unless strtools.nil?
   #output
